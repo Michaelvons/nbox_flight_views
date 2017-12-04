@@ -261,7 +261,7 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
 }
 
 .toolbar_option_text{
-  font-size: 13px;
+  font-size: 14px;
   /*font-family: Hind-Bold;*/
 }
 
@@ -383,7 +383,7 @@ button{
 
 .search_card{
   background-color: white;
-  margin: 8px;
+  margin: 10px;
   border-radius: 8px;
   padding:16px;
 }

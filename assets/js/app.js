@@ -119,10 +119,16 @@ var app = {
     })
   },
 
-  
+
   searchResult:function(){
     views.goto("searchResult", function(){
       console.log("nav to searchResult");
+    })
+  },
+
+  flightDetail:function(){
+    views.goto("flightDetail", function(){
+      console.log("nav to flightDetail");
     })
   },
 

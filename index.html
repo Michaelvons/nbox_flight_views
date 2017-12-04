@@ -139,7 +139,7 @@
             <span class="separator_dot">.</span>
             <p>1 Traveller</p>
           </div>
-          <img src="asssets/image/refresh.svg">
+          <img src="assets/image/refresh.svg">
         </div>
         <div class="search_toolbar_destination">
           <div class="search_destination_alias">
@@ -167,7 +167,7 @@
 
 
         <!-- SINGLE SERACH CARD -->
-        <div class="search_card">
+        <div class="search_card" onclick="app.flightDetail()">
           <div class="search_card_1">
             <p class="flight_airline">British Airways</p>
             <p class="flight_class">Economy</p>
@@ -207,7 +207,7 @@
 
         <!-- MULTI STOP SEARCH CARD -->
 
-        <div class="search_card">
+        <div class="search_card" onclick="app.flightDetail()">
           <div class="search_card_1">
 
             <!-- FLIGHT AIRLINE AND CLASS -->
@@ -286,6 +286,12 @@
           </div>
         </div>
       </div>
+    </div>
+
+
+    <!-- NEW VIEW -->
+    <!-- FLIGHT DETAIL VIEW -->
+<div id="flightDetail" class="view" data-statusbar="white" >
     </div>
   </div>
 

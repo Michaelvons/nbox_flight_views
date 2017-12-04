@@ -188,7 +188,7 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
 
 
 .toolbar_menu{
-  padding: 16px;
+padding: 32px 16px 0px 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -410,6 +410,7 @@ button{
   width: 100%;
   color: black;
 font-family: Hind-Semibold;
+font-size: 14px;
 
 }
 
@@ -476,6 +477,7 @@ button{
 
 .icon_text{
   margin-right: 8px;
+  width: 24px;
 }
 
 
@@ -551,7 +553,7 @@ footer p{
 
 .destination_line{
   background-color: #EAEAEA;
-  width: 65%;
+  width: 55%;
   height: 10px;
   position: relative;
 }
@@ -568,4 +570,446 @@ height: 6px;
 
 .multiple_separator_line{
   border: 1px dashed #E7EAED;
+}
+
+/*FLIGHT DETAILS CSS*/
+/**/
+/**/
+
+.main_container{
+  background-color: #f2f2f2;
+  height: auto;
+  margin: 0 auto;
+  /*padding: 20px;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_main{
+  color: white;
+  /*//width: 880px;
+  //height: 50%;*/
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #D8D8D8;
+  width: 100%;
+  font-family: Hind-Light;
+}
+
+.card_header{
+  width: 100%;
+  height: auto;
+  background-image: url(../../assets/img/bg_flightpayment.png);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 32px;
+  /*background-position: top;*/
+}
+
+.logo{
+  width: 32px;
+  margin: 16px;
+}
+
+.page_title{
+  font-family: Hind-Light;
+  font-size: 14px;
+}
+
+.ticket_title{
+  font-size: 16px;
+  font-family: Hind-Light;
+  /*margin: 32px;*/
+  color: #666666;
+}
+
+.ticket_price{
+  /*//  background-color: red;*/
+  padding: 0px 32px;
+  background-image: url(../../assets/images/bg_price.png);
+  background-position: center;
+  border-radius: 10px;
+}
+
+.ticket_price_title{
+  font-size: 16px;
+  font-family: Hind-Light;
+  margin-bottom: 0px;
+}
+
+.ticket_price_amount{
+  font-family: Hind-Bold;
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 24px !important;
+  color: black
+}
+
+.currency{
+  font-family: Hind-Bold;
+  font-size: 16px;
+}
+
+.card_header p{
+  margin: 0px;
+}
+
+.book_btn{
+  background-color: #43993C;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  font-family: Hind-Medium;
+  padding: 16px;
+  border-radius: 50px;
+  width: 220px;
+  display: flex;
+}
+
+.card_icon_text{
+  margin-right: 8px;
+}
+
+button{
+  border: none;
+}
+
+.card_body{
+  background-color: #CAD2DA;
+}
+.payment_title{
+  display: flex;
+  /*justify-content: center;*/
+}
+
+.payment_title p{
+  margin: 0px;
+}
+
+.container_card_payment{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  /*align-items: center;*/
+}
+
+.payment_date{
+
+}
+
+.payment_title{
+  color: black;
+}
+
+.icon_title{
+  margin-right: 16px;
+}
+
+.payment_details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment_date{
+  font-size: 14px;
+}
+
+.payment_type{
+  font-family: Hind-medium;
+}
+
+.card_payment{
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card_payment_flight_title{
+  color: black;
+  font-size: 14px;
+}
+
+.card_payment_flight_alias{
+  color: #666666;
+  font-size: 12px;
+}
+
+.card_payment_1{
+  display: flex;
+}
+
+.card_payment_1 p{
+  margin: 0px;
+}
+
+.card_logo{
+  margin-right: 8px;
+}
+
+
+.search_card_destination_details{
+  width: 100%;
+}
+
+/*.search_card_destination{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}*/
+
+/*.search_card_destination p{
+  margin: 0px;
+}*/
+/*
+.destination_line{
+  background-color: #EAEAEA;
+  width: 70%;
+  height: 10px;
+  position: relative;
+}*/
+
+.destination_line_marker{
+  background-color: white;
+  width: 10px;
+  height: 8px;
+  left: 50%;
+  position: absolute;
+  border: 2px solid #FF8C69;
+}
+
+.search_card_time{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search_card_time p{
+  margin: 0px;
+  font-size: 12px;
+}
+
+.card_payment_time{
+  color: black;
+  font-family: Hind-Medium;
+}
+
+.card_payment_destination{
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.card_payment_destination p{
+  margin: 0px;
+}
+
+.search_card_3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4A4A4A;
+}
+
+.search_card_3 p{
+  margin: 0px;
+  font-size: 14px;
+}
+
+.day{
+  display: flex;
+  align-items: baseline;
+  color: #6978A9;
+}
+
+.card_progressbar{
+  background-color: #e5e5e5;
+  height: 40px;
+  border-radius: 50px;
+  margin: 32px 0px;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 8px;
+  font-family: Hind-Bold;
+}
+
+.card_progressbar_1{
+  background-color: #e5e5e5;
+  height: 40px;
+  border-radius: 50px;
+  margin: 32px 0px;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 8px;
+  font-family: Hind-Bold;
+}
+
+.card_progress_1{
+  background-color: #F8631B;
+  height: 40px;
+  width: 50%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  font-family: Hind-Bold;
+  color: white;
+  line-height: 15px;
+}
+
+.card_progress{
+  background-color: #C1A16D;
+  height: 40px;
+  width: 50%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  font-family: Hind-Bold;
+  color: white;
+}
+
+.container_card_traveller{
+  width: 885px;
+}
+
+
+/*CSS FOR CARD TRAVELLER*/
+
+
+.card_traveller_header{
+  background-color: #3C7AC9;
+  width: 100%;
+  padding: 48px 0px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-family: Hind-Light;
+}
+
+.card_traveller_body{
+  background-color: #CAD2DA;
+  font-family: Hind-Light;
+  padding: 32px 138px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_traveller_options{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_traveller_contact{
+  display: flex;
+  color: #3C7AC9;
+}
+
+.card_traveller{
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px 64px;
+}
+
+.card_traveller_options{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_traveller_option{
+  background-color: #D8D8D8;
+  color: white;
+  font-family: Hind-Medium;
+  padding:16px 32px;
+  border-radius: 50px;
+  width: 50%;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.card_traveller_option_active{
+  background-color: #666666 !important;
+}
+
+.btn_next_traveller{
+  background-color: #43993C;
+  color: white;
+  padding: 16px 32px;
+  margin-top: 32px;
+  font-size: 18px;
+  width: 300px;
+  border-radius: 50px;
+  justify-content: space-around;
+  font-family: Hind-Bold;
+  display: flex;
+}
+
+.card_traveller_form{
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0px;
+  /*margin: 32px 0px;*/
+}
+
+.container_btn_next_traveller{
+  margin-top: 32px;
+}
+
+.card_traveller_form input{
+  margin: 8px 0px;
+  background-color: #F5F5F5;
+  border: 1px solid #EAEAEA;
+  height: 40px;
+  border-radius: 8px;
+  color: #666666;
+  font-size: 16px;
+  padding: 8px 16px;
+  font-family: Hind-Light;
+}
+
+.container_btn_next_traveller{
+  display: flex;
+  justify-content: center;
+}
+
+/*.icon_text{
+  margin-left: 8px;
+  width: 24px;
+}*/
+
+.btn_icon{
+  margin-left: 16px;
 }

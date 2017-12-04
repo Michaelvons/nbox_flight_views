@@ -154,7 +154,7 @@
           <div class="toolbar_options toolbar_options_1">
             <div class="search_toolbar_option">
               <img src="assets/image/tag.svg">
-              <p class="toolbar_option_text">Price Per Person</p>
+              <p class="">Price Per Person</p>
             </div>
             <div class="search_toolbar_option">
               <img src="assets/image/filter.svg">
@@ -309,7 +309,7 @@
 
         <p class="ticket_price_amount"><span class="currency">NGN</span> 875,000<span class="currency">.00</span></p>
 
-        <button class="book_btn">
+        <button class="book_btn" onclick="app.travellerDetail()">
           BOOK THIS FLIGHT
           <img class="icon_text" src="assets/image/arrow_next.svg">
         </button>
@@ -477,64 +477,68 @@
         </div>
       </div>
     </div>
-
-    <!-- TRAVELER CARD -->
-    <div class="container_card_traveller">
-      <div class="card_traveller_header">
-        Who's Travelling ?
-      </div>
-      <div class="card_traveller_body">
-        <div class="card_traveller_options">
-          <p>Adult 1</p>
-          <div class="card_traveller_contact">
-            <img src="assets/image/contact_blue.svg">
-            <p>Select Saved Traveller</p>
-          </div>
-        </div>
-        <div class="card_traveller">
-          <p>Select a Title</p>
-          <div class="card_traveller_options">
-            <div class="card_traveller_option card_traveller_option_active">
-              MR
-            </div>
-            <div class="card_traveller_option">
-              MRS
-            </div>
-            <div class="card_traveller_option">
-              MISS
-            </div>
-          </div>
-          <div class="card_traveller_form">
-            <input type="text" placeholder="First/Given Name (As on passport)">
-            <input type="text" placeholder="Middle Name">
-            <input type="text" placeholder="Surname (As on passport)">
-          </div>
-
-          <p>Select a Title</p>
-          <div class="card_traveller_options">
-            <div class="card_traveller_option card_traveller_option_active">
-              JUNE
-            </div>
-            <div class="card_traveller_option card_traveller_option_active">
-              30
-            </div>
-            <div class="card_traveller_option card_traveller_option_active">
-              1987
-            </div>
-          </div>
-        </div>
-        <div class="container_btn_next_traveller">
-          <button class="btn_next_traveller">
-            NEXT TRAVELLER
-            <img class="btn_icon" src="assets/image/arrow_next.svg">
-          </button>
-        </div>
-      </div>
-    </div>
-
     </div>
   </div>
 
+    <!-- END TRAVELLER -->
+
+    <!-- NEW VIEW -->
+    <!-- FLIGHT DETAIL VIEW -->
+<div id="travellerDetail" class="view" data-statusbar="white" >
+  <!-- TRAVELER CARD -->
+  <div class="container_card_traveller">
+    <div class="card_traveller_header">
+      Who's Travelling ?
+    </div>
+    <div class="card_traveller_body">
+      <div class="card_traveller_options">
+        <p>Adult 1</p>
+        <div class="card_traveller_contact">
+          <img src="assets/image/contact_blue.svg">
+          <p>Select Saved Traveller</p>
+        </div>
+      </div>
+      <div class="card_traveller">
+        <p>Select a Title</p>
+        <div class="card_traveller_options">
+          <div class="card_traveller_option card_traveller_option_active">
+            MR
+          </div>
+          <div class="card_traveller_option">
+            MRS
+          </div>
+          <div class="card_traveller_option">
+            MISS
+          </div>
+        </div>
+        <div class="card_traveller_form">
+          <input type="text" placeholder="First/Given Name (As on passport)">
+          <input type="text" placeholder="Middle Name">
+          <input type="text" placeholder="Surname (As on passport)">
+        </div>
+
+        <p>Select a Title</p>
+        <div class="card_traveller_options">
+          <div class="card_traveller_option card_traveller_option_active">
+            JUNE
+          </div>
+          <div class="card_traveller_option card_traveller_option_active">
+            30
+          </div>
+          <div class="card_traveller_option card_traveller_option_active">
+            1987
+          </div>
+        </div>
+      </div>
+      <div class="container_btn_next_traveller">
+        <button class="btn_next_traveller">
+          NEXT TRAVELLER
+          <img class="btn_icon" src="assets/image/arrow_next.svg">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <audio id="soundPlayer"></audio>
 

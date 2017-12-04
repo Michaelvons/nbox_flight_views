@@ -126,6 +126,12 @@ var app = {
     })
   },
 
+  travellerDetail:function(){
+    views.goto("travellerDetail", function(){
+      console.log("nav to travellerDetail");
+    })
+  },
+
   flightDetail:function(){
     views.goto("flightDetail", function(){
       console.log("nav to flightDetail");

@@ -261,8 +261,8 @@ padding: 32px 16px 0px 16px;
 }
 
 .toolbar_option_text{
-  font-size: 14px;
-  /*font-family: Hind-Bold;*/
+  font-size: 13px;
+  font-family: Hind-Bold;
 }
 
 .toolbar_options_1{
@@ -493,7 +493,7 @@ button{
   /*padding: 64px;*/
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
 }
 
 header{
@@ -900,7 +900,7 @@ button{
 }
 
 .container_card_traveller{
-  width: 885px;
+  /*width: 885px;*/
 }
 
 
@@ -921,7 +921,7 @@ button{
 .card_traveller_body{
   background-color: #CAD2DA;
   font-family: Hind-Light;
-  padding: 32px 138px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -939,7 +939,7 @@ button{
 .card_traveller{
   background-color: white;
   border-radius: 8px;
-  padding: 32px 64px;
+  padding: 24px;
 }
 
 .card_traveller_options{
@@ -951,13 +951,13 @@ button{
   background-color: #D8D8D8;
   color: white;
   font-family: Hind-Medium;
-  padding:16px 32px;
+  padding: 8px;
   border-radius: 50px;
   width: 50%;
   margin-right: 16px;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .card_traveller_option_active{

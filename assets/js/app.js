@@ -118,8 +118,8 @@ var app = {
 
 animatePreloader:function(){
   console.log("animate preloader");
-  var photo = document.getElementById("box");
-  TweenLite.to(photo, 2, {width:"200px", height:"150px"});
+  var photo = document.getElementById("sky");
+  TweenLite.to(photo, 2, {left:"300px"});
 },
 
   slider:function(){

@@ -188,13 +188,14 @@
 <!-- SEARCH PRELOADER VIEW -->
 <div id="search_preloader" class="view" data-statusbar="white" >
   <div class="main_preloader_container">
-    <header id="box">
+    <header>
       <img class="logo" src="assets/image/logo_nbox_black.svg" onclick="app.searchResult()">
     </header>
 
     <!-- PRELOADER IMAGE -->
     <div class="container_preloader">
-      <img class="bg_preloader" src="assets/image/bg_preloader.png">
+      <img id="sky" class="bg_preloader_day" src="assets/image/bg_night.png">
+      <img class="bg_preloader" src="assets/image/bg_window.png">
     </div>
     <footer>
       <p class="header_text">  Searching for flights </p>

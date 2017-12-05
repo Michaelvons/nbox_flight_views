@@ -72,7 +72,10 @@ var app = {
     app.CalculateViewPort();
 
     views.start("home",function(){
-      app.element("talk").innerHTML="oshey";
+      // app.element("talk").innerHTML="oshey";
+      app.slider();
+      app.animatePreloader();
+
     });
 
   },
@@ -113,9 +116,33 @@ var app = {
   //
   //
 
+animatePreloader:function(){
+  console.log("animate preloader");
+  var photo = document.getElementById("box");
+  TweenLite.to(photo, 2, {width:"200px", height:"150px"});
+},
+
+  slider:function(){
+    console.log("slider started");
+    var mySwiper = new Swiper('.swiper-container', {
+      // pagination: '.swiper-pagination',
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev',
+      slidesPerView: 2,
+      // centeredSlides: true,
+      // paginationClickable: true,
+      spaceBetween: 8
+
+      // autoplay:{
+      //   delay:1000,
+      // }
+    });
+  },
+
   searchPreloader:function(){
     views.goto("search_preloader", function(){
       console.log("nav to search_preloader")
+      app.animatePreloader();
     })
   },
 
@@ -138,11 +165,7 @@ var app = {
     })
   },
 
-  // page2:function(){
-  //   views.goto("page2",function(){
-  //   app.doLogin();
-  //   })
-  // },
+
   doLogin:function(){
     app.showBusy()
     var payload={"username":"oo","password":"ooo"};

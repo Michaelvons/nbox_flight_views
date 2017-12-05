@@ -8,6 +8,7 @@
   <title>Todo</title>
   <link rel="stylesheet" href="assets/app.css" type="text/css"/>
   <link rel="stylesheet" href="views/views.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/swiper.min.css" type="text/css"/>
 
 </head>
 
@@ -78,219 +79,299 @@
       <div class="main_content">
         <div class="container_card">
           <p class="card_title">Trending Destinations from Lagos</p>
-          <div class="cards">
-            <div class="card">
-              <img class="card_image" src="assets/image/image_1.png">
-            </div>
-          </div>
+          <!-- <div class="cards">
+          <div class="card">
+          <img class="card_image" src="assets/image/image_1.png">
         </div>
-        <div class="container_card">
-          <p class="card_title">Your Search History</p>
-          <div class="cards">
-            <div class="card_search">
-              <p>Lagos</p>
-              <p>New York</p>
-              <div>
-                LOS
-                arrow
-                JFK
-              </div>
-              <p>5 Travellers</p>
-            </div>
-          </div>
-        </div>
+      </div> -->
+      <div class="card_trending">
+        <img class="card_image" src="assets/image/image_1.png">
+        <img class="card_flare" src="assets/image/flare.png">
+        <p class="card_trending_title">New York</p>
       </div>
-    </div>
 
 
-    <!-- NEW VIEW -->
-    <!-- SEARCH PRELOADER VIEW -->
-    <div id="search_preloader" class="view" data-statusbar="white" >
-      <div class="main_preloader_container">
-        <header>
-          <img class="logo" src="assets/image/logo_nbox_black.svg" onclick="app.searchResult()">
-        </header>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="card_trending">
+              <img class="card_image" src="assets/image/image_1.png">
+              <img class="card_flare" src="assets/image/flare.png">
+              <p class="card_trending_title">New York</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card_trending">
+              <img class="card_image" src="assets/image/image_1.png">
+              <img class="card_flare" src="assets/image/flare.png">
+              <p class="card_trending_title">New York</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card_trending">
+              <img class="card_image" src="assets/image/image_1.png">
+              <img class="card_flare" src="assets/image/flare.png">
+              <p class="card_trending_title">New York</p>
+            </div>
+          </div>
 
-        <!-- PRELOADER IMAGE -->
-        <div class="container_preloader">
-          <img class="bg_preloader" src="assets/image/bg_preloader.png">
+          <div class="swiper-slide">
+            <div class="card_trending">
+              <img class="card_image" src="assets/image/image_1.png">
+              <img class="card_flare" src="assets/image/flare.png">
+              <p class="card_trending_title">New York</p>
+            </div>
+          </div>
         </div>
-        <footer>
-          <p class="header_text">  Searching for flights </p>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
 
-          <!-- SEARCH DESTINATION -->
-          <div class="card_suggestion_destination">
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+
+
+    </div>
+    <div class="container_card">
+      <p class="card_title">Your Search History</p>
+      <div class="cards">
+
+        <!-- SEARCH CARD -->
+        <div class="card_search card_search_active">
+          <p>Lagos</p>
+          <p>New York</p>
+          <div class="card_suggestion_destination card_suggestion_destination_active">
             LOS
-            <img  class="separator_plane_suggestion"src="assets/image/plane_black.svg">
+            <img class="separator_plane_suggestion" src="assets/image/plane.svg">
             JFK
           </div>
-        </footer>
-      </div>
-    </div>
-
-    <!-- NEW VIEW -->
-    <!-- SEARCH RESULT VIEW -->
-    <div id="searchResult" class="view" data-statusbar="white" >
-      <div class="toolbar">
-        <div class="toolbar_menu">
-          <img src="assets/image/arrow_back_white.svg">
-          <div class="destination_details">
-            <p>One Way Trip</p>
-            <span class="separator_dot">.</span>
-            <p>1 Traveller</p>
-          </div>
-          <img src="assets/image/refresh.svg">
+          <p>5 Travellers</p>
         </div>
-        <div class="search_toolbar_destination">
-          <div class="search_destination_alias">
+
+        <!-- SEARCH CARD -->
+        <div class="card_search">
+          <p>Lagos</p>
+          <p>New York</p>
+          <div class="card_suggestion_destination card_suggestion_destination_active">
             LOS
+            <img class="separator_plane_suggestion" src="assets/image/plane_black.svg">
+            JFK
           </div>
-          <img class="search_separator_plane" src="assets/image/plane.svg">
-          <div class="search_destination_alias">
-            LHR
-          </div>
-        </div>
-        <div class="container_toolbar_options">
-          <div class="toolbar_options toolbar_options_1">
-            <div class="search_toolbar_option">
-              <img src="assets/image/tag.svg">
-              <p class="">Price Per Person</p>
-            </div>
-            <div class="search_toolbar_option">
-              <img src="assets/image/filter.svg">
-              <p class="toolbar_option_text">Filter Results</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search_main_content">
-
-
-        <!-- SINGLE SERACH CARD -->
-        <div class="search_card" onclick="app.flightDetail()">
-          <div class="search_card_1">
-            <p class="flight_airline">British Airways</p>
-            <p class="flight_class">Economy</p>
-          </div>
-          <!-- <div> -->
-          <div class="search_card_2">
-            <img class="card_logo" src="assets/image/logo_british.svg">
-            <div class="search_card_destination_details">
-              <!-- DESTINATION CODE -->
-              <div class="search_card_destination">
-                <p>LOS</p>
-                <div class="destination_line">
-                  <div class="destination_line_marker">
-                  </div>
-                </div>
-                <p>LHR</p>
-              </div>
-              <div class="search_card_time">
-                <p>1:50PM</p>
-                <p class="destination_length">6h 57m</p>
-                <p>8:07PM</p>
-              </div>
-            </div>
-          </div>
-          <!-- </div> -->
-          <div class="search_card_3">
-            <p>Nonstop</p>
-            <div class="day">
-              <img class="card_icon_text" src="assets/image/moon.svg">
-              <p>Overnight</p>
-            </div>
-            <button class="pay_btn">
-              NGN 398,500
-            </button>
-          </div>
+          <p>5 Travellers</p>
         </div>
 
-        <!-- MULTI STOP SEARCH CARD -->
-
-        <div class="search_card" onclick="app.flightDetail()">
-          <div class="search_card_1">
-
-            <!-- FLIGHT AIRLINE AND CLASS -->
-            <p class="flight_airline">British Airways</p>
-            <p class="flight_class">Economy</p>
+        <!-- SEARCH CARD -->
+        <div class="card_search">
+          <p>Lagos</p>
+          <p>New York</p>
+          <div class="card_suggestion_destination card_suggestion_destination_active">
+            LOS
+            <img class="separator_plane_suggestion" src="assets/image/plane_black.svg">
+            JFK
           </div>
-          <div class="search_card_2">
-            <img class="card_logo" src="assets/image/logo_british.svg">
-            <div class="search_card_destination_details">
-
-              <!-- DESTINATION ABBREVIATION -->
-              <div class="search_card_destination">
-                <p>LOS</p>
-                <div class="destination_line">
-                  <div class="destination_line_marker">
-                  </div>
-                </div>
-                <p>LHR</p>
-              </div>
-
-              <!-- FLIGHT TIME -->
-              <div class="search_card_time">
-                <p>1:50PM</p>
-                <p class="destination_length">6h 57m</p>
-                <p>8:07PM</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FLIGHT STOPS -->
-          <div class="search_card_3">
-            <p>1 Stop</p>
-          </div>
-          <hr class="multiple_separator_line">
-          <div class="search_card_1">
-
-            <!-- FLIGHT AIRLINE AND CLASS -->
-            <p class="flight_airline">British Airways</p>
-            <p class="flight_class">Economy</p>
-          </div>
-          <div class="search_card_2">
-            <img class="card_logo" src="assets/image/logo_british.svg">
-            <div class="search_card_destination_details">
-
-              <!-- DESTINATION ABBREVIATION -->
-              <div class="search_card_destination">
-                <p>LOS</p>
-                <div class="destination_line">
-                  <div class="destination_line_marker">
-                  </div>
-                </div>
-                <p>LHR</p>
-              </div>
-
-              <!-- FLIGHT TIME -->
-              <div class="search_card_time">
-                <p>1:50PM</p>
-                <p class="destination_length">6h 57m</p>
-                <p>8:07PM</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FLIGHT STOPS -->
-          <div class="search_card_3">
-            <p>1 Stop</p>
-            <div class="day">
-              <img class="card_icon_text" src="assets/image/moon.svg">
-              <p>Overnight</p>
-            </div>
-
-            <!-- PAY BUTTON -->
-            <button class="pay_btn">
-              NGN 398,500
-            </button>
-          </div>
+          <p>5 Travellers</p>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 
-    <!-- NEW VIEW -->
-    <!-- FLIGHT DETAIL VIEW -->
+<!-- NEW VIEW -->
+<!-- SEARCH PRELOADER VIEW -->
+<div id="search_preloader" class="view" data-statusbar="white" >
+  <div class="main_preloader_container">
+    <header id="box">
+      <img class="logo" src="assets/image/logo_nbox_black.svg" onclick="app.searchResult()">
+    </header>
+
+    <!-- PRELOADER IMAGE -->
+    <div class="container_preloader">
+      <img class="bg_preloader" src="assets/image/bg_preloader.png">
+    </div>
+    <footer>
+      <p class="header_text">  Searching for flights </p>
+
+      <!-- SEARCH DESTINATION -->
+      <div class="card_suggestion_destination">
+        LOS
+        <img  class="separator_plane_suggestion"src="assets/image/plane_black.svg">
+        JFK
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- NEW VIEW -->
+<!-- SEARCH RESULT VIEW -->
+<div id="searchResult" class="view" data-statusbar="white" >
+  <div class="toolbar">
+    <div class="toolbar_menu">
+      <img src="assets/image/arrow_back_white.svg">
+      <div class="destination_details">
+        <p>One Way Trip</p>
+        <span class="separator_dot">.</span>
+        <p>1 Traveller</p>
+      </div>
+      <img src="assets/image/refresh.svg">
+    </div>
+    <div class="search_toolbar_destination">
+      <div class="search_destination_alias">
+        LOS
+      </div>
+      <img class="search_separator_plane" src="assets/image/plane.svg">
+      <div class="search_destination_alias">
+        LHR
+      </div>
+    </div>
+    <div class="container_toolbar_options">
+      <div class="toolbar_options toolbar_options_1">
+        <div class="search_toolbar_option">
+          <img src="assets/image/tag.svg">
+          <p class="">Price Per Person</p>
+        </div>
+        <div class="search_toolbar_option">
+          <img src="assets/image/filter.svg">
+          <p class="">Filter Results</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search_main_content">
+
+
+    <!-- SINGLE SERACH CARD -->
+    <div class="search_card" onclick="app.flightDetail()">
+      <div class="search_card_1">
+        <p class="flight_airline">British Airways</p>
+        <p class="flight_class">Economy</p>
+      </div>
+      <!-- <div> -->
+      <div class="search_card_2">
+        <img class="card_logo" src="assets/image/logo_british.svg">
+        <div class="search_card_destination_details">
+          <!-- DESTINATION CODE -->
+          <div class="search_card_destination">
+            <p>LOS</p>
+            <div class="destination_line">
+              <div class="destination_line_marker">
+              </div>
+            </div>
+            <p>LHR</p>
+          </div>
+          <div class="search_card_time">
+            <p>1:50PM</p>
+            <p class="destination_length">6h 57m</p>
+            <p>8:07PM</p>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <div class="search_card_3">
+        <p>Nonstop</p>
+        <div class="day">
+          <img class="card_icon_text" src="assets/image/moon.svg">
+          <p>Overnight</p>
+        </div>
+        <button class="pay_btn">
+          NGN 398,500
+        </button>
+      </div>
+    </div>
+
+    <!-- MULTI STOP SEARCH CARD -->
+
+    <div class="search_card" onclick="app.flightDetail()">
+      <div class="search_card_1">
+
+        <!-- FLIGHT AIRLINE AND CLASS -->
+        <p class="flight_airline">British Airways</p>
+        <p class="flight_class">Economy</p>
+      </div>
+      <div class="search_card_2">
+        <img class="card_logo" src="assets/image/logo_british.svg">
+        <div class="search_card_destination_details">
+
+          <!-- DESTINATION ABBREVIATION -->
+          <div class="search_card_destination">
+            <p>LOS</p>
+            <div class="destination_line">
+              <div class="destination_line_marker">
+              </div>
+            </div>
+            <p>LHR</p>
+          </div>
+
+          <!-- FLIGHT TIME -->
+          <div class="search_card_time">
+            <p>1:50PM</p>
+            <p class="destination_length">6h 57m</p>
+            <p>8:07PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLIGHT STOPS -->
+      <div class="search_card_3">
+        <p>1 Stop</p>
+      </div>
+      <hr class="multiple_separator_line">
+      <div class="search_card_1">
+
+        <!-- FLIGHT AIRLINE AND CLASS -->
+        <p class="flight_airline">British Airways</p>
+        <p class="flight_class">Economy</p>
+      </div>
+      <div class="search_card_2">
+        <img class="card_logo" src="assets/image/logo_british.svg">
+        <div class="search_card_destination_details">
+
+          <!-- DESTINATION ABBREVIATION -->
+          <div class="search_card_destination">
+            <p>LOS</p>
+            <div class="destination_line">
+              <div class="destination_line_marker">
+              </div>
+            </div>
+            <p>LHR</p>
+          </div>
+
+          <!-- FLIGHT TIME -->
+          <div class="search_card_time">
+            <p>1:50PM</p>
+            <p class="destination_length">6h 57m</p>
+            <p>8:07PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLIGHT STOPS -->
+      <div class="search_card_3">
+        <p>1 Stop</p>
+        <div class="day">
+          <img class="card_icon_text" src="assets/image/moon.svg">
+          <p>Overnight</p>
+        </div>
+
+        <!-- PAY BUTTON -->
+        <button class="pay_btn">
+          NGN 398,500
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- NEW VIEW -->
+<!-- FLIGHT DETAIL VIEW -->
 <div id="flightDetail" class="view" data-statusbar="white" >
   <div class="main_container">
 
@@ -299,8 +380,8 @@
 
       <div class="toolbar_menu">
         <img src="assets/image/arrow_back_black.svg">
-      <span class="ticket_title">TOTAL FARE</span>
-      <img src="assets/image/refresh.svg">
+        <span class="ticket_title">TOTAL FARE</span>
+        <img src="assets/image/refresh.svg">
       </div>
 
 
@@ -477,18 +558,20 @@
         </div>
       </div>
     </div>
-    </div>
   </div>
+</div>
 
-    <!-- END TRAVELLER -->
+<!-- END TRAVELLER -->
 
-    <!-- NEW VIEW -->
-    <!-- FLIGHT DETAIL VIEW -->
+<!-- NEW VIEW -->
+<!-- FLIGHT DETAIL VIEW -->
 <div id="travellerDetail" class="view" data-statusbar="white" >
   <!-- TRAVELER CARD -->
   <div class="container_card_traveller">
     <div class="card_traveller_header">
-      Who's Travelling ?
+      <img src="assets/image/arrow_back_white.svg">
+      <p>  Who's Travelling ?</p>
+      <img src="assets/image/arrow_right_blue.svg">
     </div>
     <div class="card_traveller_body">
       <div class="card_traveller_options">
@@ -540,18 +623,19 @@
   </div>
 </div>
 
-  <audio id="soundPlayer"></audio>
+<audio id="soundPlayer"></audio>
 
-  <script src="cordova.js"></script>
+<script src="cordova.js"></script>
 
-  <script src="views/views.js"></script>
-  <script src="gsap/css.js"></script>
-  <script src="gsap/easepack.js"></script>
-  <script src="gsap/TweenLite.min.js"></script>
-  <script src="gsap/CSSPlugin.min.js"></script>
-  <script src="gsap/ScrollToPlugin.min.js"></script>
-  <script src="assets/js/fastclick.js"></script>
-  <script src="assets/js/app.js"></script>
+<script src="views/views.js"></script>
+<script src="gsap/css.js"></script>
+<script src="gsap/easepack.js"></script>
+<script src="gsap/TweenLite.min.js"></script>
+<script src="gsap/CSSPlugin.min.js"></script>
+<script src="gsap/ScrollToPlugin.min.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/app.js"></script>
 
 </body>
 

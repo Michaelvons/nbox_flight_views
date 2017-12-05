@@ -217,6 +217,7 @@ padding: 32px 16px 0px 16px;
   color: white;
   padding: 16px 56px;
   justify-content: space-between;
+  margin-top: 16px;
 }
 
 .destination_alias{
@@ -243,7 +244,7 @@ padding: 32px 16px 0px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
+  padding: 8px;
   justify-content: center;
 }
 
@@ -261,7 +262,7 @@ padding: 32px 16px 0px 16px;
 }
 
 .toolbar_option_text{
-  font-size: 13px;
+  font-size: 14px;
   font-family: Hind-Bold;
 }
 
@@ -298,7 +299,7 @@ button{
 
 .card_title{
   color: #4A4A4A;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .card_image{
@@ -313,17 +314,27 @@ button{
 .cards{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card_search{
-  background-color: black;
+  background-color: white;
   border-radius: 8px;
-  color: white;
+  color: black;
   padding: 24px 16px;
+  min-width: 35%;
+  margin: 8px;
+}
+
+.card_search_active{
+  background-color: black;
+    color: white !important;
+
 }
 
 .card_search p{
-  font-size: 12px;
+  font-size: 14px;
   margin:0px;
 }
 
@@ -528,10 +539,14 @@ footer p{
 }
 
 .card_suggestion_destination{
-  font-size: 24px;
+  font-size: 20px;
   font-family: Hind-Bold;
-  color: black;
+  /*color: black;*/
 
+}
+
+.card_suggestion_destination_active{
+  /*color: white;*/
 }
 
 .separator_plane_suggestion{
@@ -910,11 +925,11 @@ button{
 .card_traveller_header{
   background-color: #3C7AC9;
   width: 100%;
-  padding: 48px 0px;
+  padding: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-family: Hind-Light;
 }
 
@@ -929,6 +944,7 @@ button{
 .card_traveller_options{
   display: flex;
   justify-content: space-between;
+  font-family: Hind-Medium;
 }
 
 .card_traveller_contact{
@@ -940,6 +956,10 @@ button{
   background-color: white;
   border-radius: 8px;
   padding: 24px;
+}
+
+.card_traveller p{
+  margin: 4px;
 }
 
 .card_traveller_options{
@@ -980,23 +1000,24 @@ button{
 .card_traveller_form{
   display: flex;
   flex-direction: column;
-  margin: 32px 0px;
+  margin: 16px 0px;
   /*margin: 32px 0px;*/
 }
 
-.container_btn_next_traveller{
+/*.container_btn_next_traveller{
   margin-top: 32px;
-}
+}*/
 
 .card_traveller_form input{
   margin: 8px 0px;
   background-color: #F5F5F5;
   border: 1px solid #EAEAEA;
-  height: 40px;
+  /*height: 40px;*/
   border-radius: 8px;
   color: #666666;
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 12px;
+  opacity: 1;
   font-family: Hind-Light;
 }
 
@@ -1013,3 +1034,72 @@ button{
 .btn_icon{
   margin-left: 16px;
 }
+
+
+.container_card{
+  margin-bottom: 24px;
+}
+
+
+.card_trending{
+  width: 80%;
+  margin-right: 16px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.card_image{
+  width: 100%;
+  border-radius: 8px;
+  /*background-image: url(../../assets/img/flare.png);*/
+}
+
+.card_flare{
+  position: absolute;
+  left: 0px;
+  height: 50%;
+  bottom: 0px;
+  border-bottom-left-radius: 8px;
+  width: 100%;
+}
+
+.card_trending_title{
+  position: absolute;
+  top: 90px;
+  left: 16px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-family: Hind-Medium;
+}
+
+
+/*SWIPER CSS*/
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+  /*margin: 20px auto;*/
+  background-color: yellow;
+}
+
+/*.container_card_trending {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  background-color: yellow;
+}*/
+
+.swiper-slide {
+  width: 100% !important;
+margin-right: 16px !important;
+text-align: left;
+}
+
+.swiper-wrapper{
+  height: auto !important;
+}
+
+/*.swiper-wrapper{
+  width: 100%;
+}*/

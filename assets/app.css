@@ -196,15 +196,17 @@ padding: 32px 16px 0px 16px;
 }
 
 .menu_active{
-  color: #FFFFFF;
-  font-family: Hind-Medium;
-  opacity: 1 !important;
+  color: #FFFFFF !important;
+      font-family: Hind-Medium;
+
+  /*opacity: 1 !important;*/
 }
 
 .menu{
-  opacity: 0.5;
+  /*opacity: 0.5;*/
   font-size: 14px;
-  color: #FFFFFF;
+  color: #B4CBE7;
+
 }
 
 .toolbar{
@@ -544,12 +546,15 @@ footer p{
 }
 
 .bg_preloader_day{
-  width: 100%;
+  width: 3000px;
   height: 410px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url('../assets/image/bg_night.jpg');
+  background-size: cover;
+  background-position: right;
 }
 
 .card_suggestion_destination{
@@ -1056,7 +1061,7 @@ button{
 
 
 .card_trending{
-  width: 80%;
+  width: 100%;
   margin-right: 16px;
   position: relative;
   margin-bottom: 8px;
@@ -1094,7 +1099,7 @@ button{
   width: 100%;
   height: auto;
   /*margin: 20px auto;*/
-  background-color: yellow;
+  /*background-color: yellow;*/
 }
 
 /*.container_card_trending {
@@ -1105,8 +1110,8 @@ button{
 }*/
 
 .swiper-slide {
-  width: 100% !important;
-margin-right: 16px !important;
+  width: 80% !important;
+
 text-align: left;
 }
 

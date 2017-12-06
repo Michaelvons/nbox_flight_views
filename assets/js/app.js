@@ -116,11 +116,11 @@ var app = {
   //
   //
 
-animatePreloader:function(){
-  console.log("animate preloader");
-  var photo = document.getElementById("sky");
-  TweenLite.to(photo, 2, {left:"300px"});
-},
+  animatePreloader:function(){
+    console.log("animate preloader");
+    var photo = document.getElementById("sky");
+    TweenLite.to(photo, 30, {left:"-1000px", ease:Linear.easeNone,delay:0.5} );
+  },
 
   slider:function(){
     console.log("slider started");
@@ -128,15 +128,78 @@ animatePreloader:function(){
       // pagination: '.swiper-pagination',
       // nextButton: '.swiper-button-next',
       // prevButton: '.swiper-button-prev',
-      slidesPerView: 2,
+      // slidesPerView: 2,
+      slidesPerView: 'auto',
+      spaceBetween: 8
       // centeredSlides: true,
       // paginationClickable: true,
-      spaceBetween: 8
+
 
       // autoplay:{
       //   delay:1000,
       // }
     });
+  },
+
+  tabSelect:function(tabID, tabLength){
+      // tabSelect:function(tabID, tabTitle, tabLength){
+    //app.element
+    // console.log("tab id -> " + tabID);
+    // console.log("tab title -> " + tabTitle);
+    // console.log("tab length -> " + tabLength);
+    // console.log("menu selected");
+    //app.element("toolbar_menu").classList.add("menu_active");
+    //app.element("toolbar_menu").innerHTML = "<p>SMILE</p>";
+    //  app.element("toolbar_menu_"+ tabID).innerHTML = "<span class='menu menu_active'>"+ tabTitle +"</span>";
+    app.element("toolbar_menu_"+tabID).classList.add("menu_active");
+
+    // CREATE TABS AS ARRAY
+    tabs = [];
+    tabsLength = tabLength +1;
+    var inactiveTabs
+    // var inactiveTabs;
+    for (var i = 1; i < tabsLength; i++) {
+      tabs.push(i);
+
+      if(tabLength == tabs.length){
+        // console.log("finished creating tabs");
+        // console.log("created tabs -> " + tabs);
+        // console.log("created tabs length -> " + tabs.length);
+        tabIndex =  tabs.indexOf(parseInt(tabID))
+        // console.log("tab index -> " + tabIndex);
+
+        inactiveTabs =  tabs.splice(tabIndex,1);
+        // console.log("inactive tabs are -> " + inactiveTabs);
+      }
+
+
+    }
+
+    // console.log(tabs);
+    for (var i = 0; i < tabs.length; i++) {
+      //  array[i]
+      // console.log(tabs[i]);
+      //  app.element("toolbar_menu_"+ tabs[i] ).innerHTML = "<span class='menu'>"+ "ARRAY" +"</span>";
+      app.element("toolbar_menu_"+tabs[i]).classList.remove("menu_active");
+    }
+
+    // switch(toolbarMenuID) {
+    //   case '1':
+    //   console.log("first menu");
+    //   app.element("toolbar_menu_1").innerHTML = "<span class='menu menu_active'>MENU 1</span>";
+    //   break;
+    //   case '2':
+    //   console.log("second menu");
+    //   app.element("toolbar_menu_2").innerHTML = "<span class='menu menu_active'>MENU 2</span>";
+    //   break;
+    //   case '3':
+    //   console.log("third menu");
+    //   app.element("toolbar_menu_3").innerHTML = "<span class='menu menu_active'>MENU 3</span>";
+    //   break;
+    //   default:
+    //   console.log("first menu");
+    // }
+
   },
 
   searchPreloader:function(){

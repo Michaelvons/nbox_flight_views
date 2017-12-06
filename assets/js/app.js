@@ -142,64 +142,78 @@ var app = {
   },
 
   tabSelect:function(tabID, tabLength){
-      // tabSelect:function(tabID, tabTitle, tabLength){
-    //app.element
-    // console.log("tab id -> " + tabID);
-    // console.log("tab title -> " + tabTitle);
-    // console.log("tab length -> " + tabLength);
-    // console.log("menu selected");
-    //app.element("toolbar_menu").classList.add("menu_active");
-    //app.element("toolbar_menu").innerHTML = "<p>SMILE</p>";
-    //  app.element("toolbar_menu_"+ tabID).innerHTML = "<span class='menu menu_active'>"+ tabTitle +"</span>";
     app.element("toolbar_menu_"+tabID).classList.add("menu_active");
 
-    // CREATE TABS AS ARRAY
+    console.log("tab ID -> " + tabID);
+
+
     tabs = [];
     tabsLength = tabLength +1;
-    var inactiveTabs
-    // var inactiveTabs;
+    var inactiveTabs;
+
     for (var i = 1; i < tabsLength; i++) {
+      // CREATE TABS AS ARRAY
       tabs.push(i);
 
+      //GET TAB INDEX WHEN TABS ARE CREATED
       if(tabLength == tabs.length){
-        // console.log("finished creating tabs");
-        // console.log("created tabs -> " + tabs);
-        // console.log("created tabs length -> " + tabs.length);
-        tabIndex =  tabs.indexOf(parseInt(tabID))
-        // console.log("tab index -> " + tabIndex);
+        tabIndex =  tabs.indexOf(parseInt(tabID));
 
+        //RETURN ARRAY OF INACTIVE TABS
         inactiveTabs =  tabs.splice(tabIndex,1);
-        // console.log("inactive tabs are -> " + inactiveTabs);
       }
-
-
     }
 
-    // console.log(tabs);
+    //ADD CSS PROPERTY TO INACTVE TABS
     for (var i = 0; i < tabs.length; i++) {
-      //  array[i]
-      // console.log(tabs[i]);
-      //  app.element("toolbar_menu_"+ tabs[i] ).innerHTML = "<span class='menu'>"+ "ARRAY" +"</span>";
       app.element("toolbar_menu_"+tabs[i]).classList.remove("menu_active");
     }
 
-    // switch(toolbarMenuID) {
-    //   case '1':
-    //   console.log("first menu");
-    //   app.element("toolbar_menu_1").innerHTML = "<span class='menu menu_active'>MENU 1</span>";
-    //   break;
-    //   case '2':
-    //   console.log("second menu");
-    //   app.element("toolbar_menu_2").innerHTML = "<span class='menu menu_active'>MENU 2</span>";
-    //   break;
-    //   case '3':
-    //   console.log("third menu");
-    //   app.element("toolbar_menu_3").innerHTML = "<span class='menu menu_active'>MENU 3</span>";
-    //   break;
-    //   default:
-    //   console.log("first menu");
+    // if(tabID == 2){
+    //   //console.log("ONE WAY SELECTED");
+    //   //WHEN THE one way TAB IS SELECTED
+    //   app.element("departure").style.display = "none";
+    //   app.element("toolbar_plane").style.display = "none";
+    //   //  app.element("toolbar_destination").style.text-align = "center";
+    //   app.element("toolbar_destination").classList.add("centralize");
     // }
+    switch(tabID) {
+      case '1':
+      console.log(tabID);
+      app.resetDestination();
+      break;
+      case '2':
+      console.log(tabID);
+      app.element("departure").style.display = "none";
+      app.element("toolbar_plane").style.display = "none";
+      app.element("toolbar_destination").classList.add("centralize");
+        app.element("toolbar_plus").style.display = "none";
+        app.element("departure_city").style.display = "flex";
+        app.element("arrival_city").style.display = "flex";
+      break;
+      case '3':
+      console.log(tabID);
+      app.resetDestination();
+    //  app.element("toolbar_plane").style.display = "none";
+        app.element("toolbar_plus").style.display = "flex";
+        app.element("departure_city").style.display = "none";
+        app.element("arrival_city").style.display = "none";
 
+
+
+      break;
+      default:
+      console.log("tabID");
+    }
+  },
+
+  resetDestination:function(){
+    app.element("departure").style.display = "block";
+    app.element("toolbar_plane").style.display = "block";
+    app.element("toolbar_destination").classList.remove("centralize");
+    app.element("toolbar_plus").style.display = "none";
+    app.element("departure_city").style.display = "flex";
+    app.element("arrival_city").style.display = "flex";
   },
 
   searchPreloader:function(){

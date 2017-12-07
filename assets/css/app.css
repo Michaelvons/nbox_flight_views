@@ -151,32 +151,32 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
 
 @font-face {
   font-family: "Hind-Light";
-  src: url("fonts/Hind-Light.ttf") format('truetype');
+  src: url("../fonts/Hind-Light.ttf") format('truetype');
   ;
 
 }
 
 @font-face {
   font-family: "Hind-Regular";
-  src: url("fonts/Hind-Regular.ttf") format('truetype');
+  src: url("../fonts/Hind-Regular.ttf") format('truetype');
   ;
 }
 
 @font-face {
   font-family: "Hind-Medium";
-  src: url("fonts/Hind-Medium.ttf") format('truetype');
+  src: url("../fonts/Hind-Medium.ttf") format('truetype');
   ;
 }
 
 @font-face {
   font-family: "Hind-Semibold";
-  src: url("fonts/Hind-SemiBold.ttf") format('truetype');
+  src: url("../fonts/Hind-SemiBold.ttf") format('truetype');
   ;
 }
 
 @font-face {
   font-family: "Hind-Bold";
-  src: url("fonts/Hind-Bold.ttf") format('truetype');
+  src: url("../fonts/Hind-Bold.ttf") format('truetype');
   ;
 }
 
@@ -219,7 +219,7 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
   color: white;
   padding: 16px 56px;
   justify-content: space-between;
-  margin-top: 16px;
+  margin: 24px 0px 32px 0px;
 }
 
 .destination_alias{
@@ -227,7 +227,7 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 36px;
+  line-height: 0px;
   font-family: Hind-Medium;
 }
 
@@ -238,8 +238,13 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
   font-family: Hind-Medium;
   padding: 0px;
   margin: 0px;
-  line-height: 0px;
+  line-height: 70px;
   background-color: transparent;
+  color: white;
+}
+
+
+.destination_alias input::placeholder {
   color: white;
 }
 
@@ -559,14 +564,15 @@ footer p{
 
 .bg_preloader_day{
   width: 3000px;
-  height: 410px;
+  height: 330px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0%;
   transform: translate(-50%, -50%);
-  background-image: url('../assets/image/bg_night.jpg');
-  background-size: cover;
+  background-image: url('/assets/image/bg_night.jpg');
+  background-size: contain;
   background-position: right;
+  /*background-repeat: no-repeat;*/
 }
 
 .card_suggestion_destination{
@@ -583,7 +589,14 @@ footer p{
 .separator_plane_suggestion{
   width: 16px;
   margin: 0px 8px;
+  display: inline;
+
 }
+
+/* .separator_plane_suggestion_active{
+  display: none;
+  color: red !important;
+} */
 
 .container_preloader{
   width: 100%;
@@ -1123,8 +1136,8 @@ background-color: yellow;
 
 .swiper-slide {
   width: 80% !important;
-
   text-align: left;
+  height: auto !important;
 }
 
 .swiper-wrapper{
@@ -1144,6 +1157,20 @@ background-color: yellow;
   display: none;
 }
 
-/*.swiper-wrapper{
-width: 100%;
-}*/
+.sun{
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  width: 300px;
+}
+
+.blackPlane{
+display:none !important;
+}
+
+
+.hidewhitePlane{
+
+  display:none;
+
+}

@@ -119,7 +119,13 @@ var app = {
   animatePreloader:function(){
     console.log("animate preloader");
     var photo = document.getElementById("sky");
-    TweenLite.to(photo, 30, {left:"-1000px", ease:Linear.easeNone,delay:0.5} );
+    TweenLite.set(photo, {z:0.1});
+    TweenLite.to(photo, 40, {left:"-1000px", ease:Linear.easeNone,delay:0.5} );
+
+    var sun = document.getElementById("sun");
+    TweenLite.set(sun, {z:0.1});
+    TweenLite.to(sun, 40, {x:"-150px", ease:Linear.easeNone,delay:0.5} );
+
   },
 
   slider:function(){
@@ -187,20 +193,17 @@ var app = {
       app.element("departure").style.display = "none";
       app.element("toolbar_plane").style.display = "none";
       app.element("toolbar_destination").classList.add("centralize");
-        app.element("toolbar_plus").style.display = "none";
-        app.element("departure_city").style.display = "flex";
-        app.element("arrival_city").style.display = "flex";
+      app.element("toolbar_plus").style.display = "none";
+      app.element("departure_city").style.display = "flex";
+      app.element("arrival_city").style.display = "flex";
       break;
       case '3':
       console.log(tabID);
       app.resetDestination();
-    //  app.element("toolbar_plane").style.display = "none";
-        app.element("toolbar_plus").style.display = "flex";
-        app.element("departure_city").style.display = "none";
-        app.element("arrival_city").style.display = "none";
-
-
-
+      //  app.element("toolbar_plane").style.display = "none";
+      app.element("toolbar_plus").style.display = "flex";
+      app.element("departure_city").style.display = "none";
+      app.element("arrival_city").style.display = "none";
       break;
       default:
       console.log("tabID");
@@ -240,6 +243,55 @@ var app = {
     views.goto("flightDetail", function(){
       console.log("nav to flightDetail");
     })
+  },
+
+  searchHistorySelect:function(cardID, cardLength){
+    console.log("history clicked");
+    app.element("card_search_"+cardID).classList.add("card_search_active");
+    app.element("separator_plane_suggestion_"+cardID).style.display="none";
+    app.element("separator_plane_suggestion_white_"+cardID).style.display="inline";
+//     app.element("separator_plane_suggestion_"+cardID).innerHTML="<p>HI</p>";
+  //  app.element("separator_plane_suggestion_"+cardID).style.display="inline";
+       // app.element("separator_plane_suggestion_white_"+cardID).classList.add("blackPlane");
+
+
+
+
+    console.log("card ID -> " +cardID);
+
+
+    cards = [];
+    cardsLength = cardLength +1;
+    var inactiveCards;
+
+    for (var i = 1; i < cardsLength; i++) {
+      // CREATE TABS AS ARRAY
+      cards.push(i);
+
+      //GET TAB INDEX WHEN TABS ARE CREATED
+      if(cardLength == cards.length){
+        cardIndex =  cards.indexOf(parseInt(cardID));
+
+        //RETURN ARRAY OF INACTIVE TABS
+        inactiveCards =  cards.splice(cardIndex,1);
+      }
+    }
+
+    //ADD CSS PROPERTY TO INACTVE TABS
+    for (var i = 0; i < cards.length; i++) {
+      console.log(cards[i]);
+      app.element("card_search_"+cards[i]).classList.remove("card_search_active");
+          app.element("separator_plane_suggestion_"+cards[i]).style.display="inline";
+          app.element("separator_plane_suggestion_white_"+cards[i]).style.display="none";
+
+      //  app.element("separator_plane_suggestion_white_"+cardID).style.display="none";
+
+     // app.element("separator_plane_suggestion_"+cardID).style.display="inline";
+            // app.element("separator_plane_suggestion_white_"+cardID).classList.add("whitePlane");
+
+
+
+    }
   },
 
 
@@ -463,5 +515,10 @@ if (/Android [4-6]/.test(navigator.appVersion)) {
 window.addEventListener('load', function () {
   FastClick.attach(document.body);
 }, false);
+
+
+// $( document ).ready(function() {
+//   console.log("jquery is ready");
+// }),
 
 app.start();

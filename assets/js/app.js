@@ -245,6 +245,11 @@ var app = {
     })
   },
 
+  searchResultBack:function(){
+    console.log("back from search");
+    views.goto("home");
+  },
+
   searchHistorySelect:function(cardID, cardLength){
     console.log("history clicked");
     app.element("card_search_"+cardID).classList.add("card_search_active");

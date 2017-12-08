@@ -1212,23 +1212,32 @@ display:flex;
 }
 
 .modal{
-  width:80%;
-  height:50%;
+  width:100%;
+  height: 100vh;
   background-color:white;
   flex-direction: column;
-  border-radius:10px;
+  /*border-radius:10px;*/
   display: flex;
-  padding: 16px;
-  justify-content: center;
+  /* padding: 16px; */
+  /*justify-content: center;*/
 }
 
-.modalHeader{
+.modal_header{
   width:100%;
-  background-color:yellow;
+  background-color: #3C7AC9;
+  color: white;
   display: flex;
-  justify-content: right;
- text-align:right
-  /* text-align: right; */
+  justify-content: center;
+
+}
+
+.modal_tab{
+font-family: Hind-Medium;
+  font-size: 24px;
+}
+
+.modal_datepicker{
+
 }
 
 .ui-widget.ui-widget-content{
@@ -1244,4 +1253,77 @@ display:flex;
 .ui-datepicker-next span {
   background-image: url('/assets/image/arrow_forward.svg') !important;
   background-position: 0px 0px !important;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+  color: #0088cc !important;
+  font-family: Hind-Medium;
+  border: none !important;
+  background: white !important;
+  font-size: 16px;
+}
+
+.ui-widget.ui-widget-content{
+  border: none;
+  width: 100%;
+}
+
+.ui-widget.ui-widget-content{
+  border: none;
+}
+
+
+/*.daterangepicker.dropdown-menu{*/
+  /*width: 100%;*/
+/*}*/
+
+/*.daterangepicker{*/
+  /*display: block !important;*/
+/*}*/
+
+
+.datepicker{
+  width:100% !important;
+  border:none !important;
+}
+
+.modal_date_detail{
+  flex-grow: 1;
+  justify-content:  center;
+  display: flex;
+  padding: 16px;
+  text-align: center;
+}
+
+.modal_date_detail p{
+  margin: 0px;
+}
+
+.modal_date{
+  font-family: Hind-Bold;
+  justify-content: center;
+  text-align: center;
+  display:  flex;
+  flex-grow: 1;
 }

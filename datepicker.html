@@ -12,19 +12,35 @@
     <!--LOCAL SOURCES-->
 
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/daterangepicker.css" type="text/css"/>
+
     <script src="assets/js/jquery-3.2.1.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+
 
 </head>
 <body>
 
-Date: here <div id="datepicker"></div>
+Date: heddre <div id="datepicker"></div>
 <script>
-    $( function() {
+    // $( function() {
         $( "#datepicker" ).datepicker();
-    } );
+    // } );
 </script>
 
+
+Modern Date:
+<div id="newDatepicker"></div>
+<input name="daterange" placeholder="Modern date picker">
+<script>
+
+    $('input[name="daterange"]').daterangepicker();
+
+   // $( "#newDatepicker").daterangepicker();
+</script>
 
 </body>
 </html>

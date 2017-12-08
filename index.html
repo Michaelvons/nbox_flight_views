@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="views/views.css" type="text/css"/>
   <link rel="stylesheet" href="assets/css/swiper.min.css" type="text/css"/>
   <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>-->
+    <link rel="stylesheet" href="assets/css/daterangepicker.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/datepicker.min.css">
+
 
 </head>
 
@@ -647,10 +651,42 @@
 
 <div class="modal">
 <!-- <div class="modalHeader"> -->
-<p class="closeDatepickerModal" onclick="app.closeDatepickerModal()">CLOSE MODAL</p>
+<!--<p class="closeDatepickerModal" onclick="app.closeDatepickerModal()">CLOSE MODAL</p>-->
 <!--   <div class="closeDatepickerModal" onclick="app.closeDatepickerModal()">CLOSE MODAL</div> -->
 <!--   </div> -->
-    Date: here <div id="datepicker"></div>
+
+    <div class="modal_header">
+
+        <div class="modal_date_detail">
+            <span> Departure <p id="modalDeparture" class="modal_date">Select a date</p></span>
+
+        </div>
+        <div class="modal_date_detail">
+            <span> Return <p id="modalReturn" class="modal_date">select a date</p></span>
+
+        </div>
+
+        <!--<span> Departure <p id="modalDeparture" class="modalDeparture">Select a date</p></span>-->
+        <!--<span> Return <p id="modalReturn" class="modalReturn">select a date</p></span>-->
+    </div>
+
+
+    <!--<p id="modalDeparture" class="modalDeparture">Departure</p>-->
+    <!--<p id="modalReturn" class="modalReturn">Return</p>-->
+
+     <div id="datepicker" class="modal_datepicker" data-language='en'></div>
+
+
+    <!--<input name="daterange" readonly>-->
+    <!--<div id="my-element"></div>-->
+    <!--<input type="text"-->
+           <!--class="datepicker-here"-->
+           <!--data-language='en'-->
+           <!--data-multiple-dates="3"-->
+           <!--data-multiple-dates-separator=", "-->
+           <!--data-position='top left'/>-->
+    <!--<input type="text" id="select_date"  />-->
+    <!--div date <div id="divdate"></div>-->
 
   </div>
 
@@ -670,6 +706,11 @@
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/jquery-3.2.1.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+      <script src="assets/js/daterangepicker.js"></script>
+      <script src="assets/js/datepicker.min.js"></script>
+      <script src="assets/js/datepicker.en.js"></script>
+
 
 
 <script src="assets/js/app.js"></script>

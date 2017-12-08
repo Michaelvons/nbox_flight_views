@@ -247,18 +247,67 @@ var app = {
 
   showDatepickerModal:function(){
     console.log("showDatePicker");
-    views.flash("modalDatepicker", function () {
+    views.overlay("modalDatepicker",55, function () {
         console.log("Starting....");
 
         var dateFormat = 'dd/mm/yy';
 
 
-        $('#datepicker').datepicker({dateFormat: dateFormat,
-            onSelect: function(dateText) {
-                console.log(dateText);
+
+        $('#datepicker').datepicker({dateFormat: dateFormat,range:true,
+            onSelect: function(dates) {
+
+                console.log("date is this" + dates);
+                dateArray = dates.split(",");
+
+                console.log(dateArray);
+                console.log("array length" + dateArray.length)
+                if(dateArray.length  < 2){
+                    console.log("no return");
+                    app.element("modalReturn").innerHTML = "select a date";
+                } else {
+                    app.element("modalReturn").innerHTML = dateArray[1];
+
+                }
+
+                app.element("modalDeparture").innerHTML = dateArray[0];
+
+
             }
         });
 
+        // $('input[name="daterange"]').show();
+        //
+        //
+        // $('input[name="daterange"]').daterangepicker({
+        //     singleDatePicker: false,
+        //     showDropdowns: true,
+        //     alwaysShowCalendars:false,
+        //     autoApply:true
+        //
+        // }).show();
+        //
+        // $('#my-element').datepicker([options]);
+
+        //
+        // $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
+        //     //do something, like clearing an input
+        //
+        //
+        //     $('#daterange').val('');
+        // });
+
+
+
+        //
+        // $('input[name="daterange"]').daterangepicker().on('changeDate', function (e) {
+        //    // $("#my-input").text(e.format());
+        //     console.log(e)
+        // });
+
+     //   $('input[name="daterange"]').show();
+
+       //var date = $('#datepicker').datepicker({ dateFormat: 'dd-mm-yy' }).val();
 
     });
 

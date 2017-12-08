@@ -245,8 +245,39 @@ var app = {
     })
   },
 
+  showDatepickerModal:function(){
+    console.log("showDatePicker");
+    views.flash("modalDatepicker", function () {
+        console.log("Starting....");
+        $( "#datepicker" ).datepicker();
+    });
+
+
+  },
+
+  flightDetailBack:function(){
+    views.goto("searchResult");
+  },
+
   searchResultBack:function(){
-    console.log("back from search");
+    //console.log("back from search");
+    views.goto("home");
+  },
+
+  closeDatepickerModal:function(){
+    console.log("closeDatepickerModal");
+    views.hideFlash("modalDatepicker");
+
+  },
+
+    searchResultRefresh:function(){
+    console.log("search refresh");
+    app.element("searchResultRefresh").classList.add("rotate");
+
+  },
+
+  travellerBack:function(){
+    console.log("travellerBack");
     views.goto("home");
   },
 
@@ -255,9 +286,7 @@ var app = {
     app.element("card_search_"+cardID).classList.add("card_search_active");
     app.element("separator_plane_suggestion_"+cardID).style.display="none";
     app.element("separator_plane_suggestion_white_"+cardID).style.display="inline";
-//     app.element("separator_plane_suggestion_"+cardID).innerHTML="<p>HI</p>";
-  //  app.element("separator_plane_suggestion_"+cardID).style.display="inline";
-       // app.element("separator_plane_suggestion_white_"+cardID).classList.add("blackPlane");
+
 
 
 
@@ -522,8 +551,22 @@ window.addEventListener('load', function () {
 }, false);
 
 
-// $( document ).ready(function() {
-//   console.log("jquery is ready");
-// }),
+
 
 app.start();
+
+
+$( document ).ready(function() {
+    console.log("jquery is ready");
+    // $( function() {
+    //     $( "#datepicker" ).datepicker();
+    // } );
+
+    $("departure").click(function(){
+        // alert("The paragraph was clicked.");
+        console.log("hello from button")
+    });
+
+
+
+});

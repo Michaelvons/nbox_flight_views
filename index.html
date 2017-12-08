@@ -26,6 +26,8 @@
     <!-- VIEW -->
     <!-- HOME VIEW -->
     <div id="home" class="view" data-statusbar="white">
+
+
       <div class="toolbar">
         <div class="toolbar_menu">
           <img src="assets/image/arrow_back_white.svg">
@@ -41,7 +43,7 @@
           <img src="assets/image/menu.svg">
         </div>
         <div id="toolbar_destination" class="toolbar_destination">
-          <div id="departure" class="destination_alias" onclick="app.datepicker()">
+          <div id="departure" class="destination_alias">
             <input type="text" placeholder="LOS">
             <p  id="departure_city"class="destination">DEPARTURE CITY</p>
           </div>
@@ -57,7 +59,7 @@
         </div>
         <div class="container_toolbar_options">
           <div class="toolbar_options toolbar_options_1">
-            <div class="toolbar_option" id="datepicker">
+            <div class="toolbar_option"  onclick="app.showDatepickerModal()">
               <p class="toolbar_option_title">Departure</p>
               <p class="toolbar_option_text">TUE, AUG 25</p>
             </div>
@@ -84,6 +86,10 @@
       <div class="main_content">
         <div class="container_card">
           <p class="card_title">Trending Destinations from Lagos</p>
+
+
+
+
           <!-- <div class="cards">
           <div class="card">
           <img class="card_image" src="assets/image/image_1.png">
@@ -233,7 +239,7 @@
         <span class="separator_dot">.</span>
         <p>1 Traveller</p>
       </div>
-      <img src="assets/image/refresh.svg">
+      <img id="searchResultRefresh" src="assets/image/refresh.svg" onclick="app.searchResultRefresh()">
     </div>
     <div class="search_toolbar_destination">
       <div class="search_destination_alias">
@@ -392,7 +398,7 @@
     <div class="card_main">
 
       <div class="toolbar_menu">
-        <img src="assets/image/arrow_back_black.svg">
+        <img id="flightDetailBack" src="assets/image/arrow_back_black.svg" onclick="app.flightDetailBack()">
         <span class="ticket_title">TOTAL FARE</span>
         <img src="assets/image/refresh.svg">
       </div>
@@ -582,9 +588,9 @@
   <!-- TRAVELER CARD -->
   <div class="container_card_traveller">
     <div class="card_traveller_header">
-      <img src="assets/image/arrow_back_white.svg">
+      <img id="travellerBack" src="assets/image/arrow_back_white.svg" onclick="app.travellerBack()">
       <p>  Who's Travelling ?</p>
-      <img src="/assets/image/arrow_right_blue.svg">
+      <img src="assets/image/arrow_right_blue.svg">
     </div>
     <div class="card_traveller_body">
       <div class="card_traveller_options">
@@ -636,6 +642,22 @@
   </div>
 </div>
 
+<!-- DATE PICKER MODAL -->
+<div id="modalDatepicker" class="modalDatepicker">
+
+<div class="modal">
+  <div class="closeDatepickerModal" onclick="app.closeDatepickerModal()">CLOSE MODAL</div>
+    Date: here <div id="datepicker"></div>
+    <script>
+
+    </script>
+
+
+
+  </div>
+
+</div>
+
 <audio id="soundPlayer"></audio>
 
 <script src="cordova.js"></script>
@@ -653,6 +675,7 @@
 
 
 <script src="assets/js/app.js"></script>
+  </div>
 
 </body>
 

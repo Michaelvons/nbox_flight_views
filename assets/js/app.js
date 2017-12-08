@@ -249,7 +249,17 @@ var app = {
     console.log("showDatePicker");
     views.flash("modalDatepicker", function () {
         console.log("Starting....");
-        $( "#datepicker" ).datepicker();
+
+        var dateFormat = 'dd/mm/yy';
+
+
+        $('#datepicker').datepicker({dateFormat: dateFormat,
+            onSelect: function(dateText) {
+                console.log(dateText);
+            }
+        });
+
+
     });
 
 

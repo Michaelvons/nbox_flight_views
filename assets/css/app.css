@@ -1201,9 +1201,9 @@ display:flex;
 
 
 .closeDatepickerModal{
-  background-color:blue;
-    width:50%;
-  height:50%;
+  width: 100%;
+  text-align:  right;
+  margin: 0px;
 }
 
 .datepickerModal{
@@ -1215,6 +1215,33 @@ display:flex;
   width:80%;
   height:50%;
   background-color:white;
+  flex-direction: column;
   border-radius:10px;
   display: flex;
+  padding: 16px;
+  justify-content: center;
+}
+
+.modalHeader{
+  width:100%;
+  background-color:yellow;
+  display: flex;
+  justify-content: right;
+ text-align:right
+  /* text-align: right; */
+}
+
+.ui-widget.ui-widget-content{
+      border: 1px solid #c5c5c5;
+    width: 95%;
+}
+
+.ui-datepicker-prev span {
+  background-image: url('/assets/image/arrow_back.svg') !important;
+  background-position: 0px 0px !important;
+}
+
+.ui-datepicker-next span {
+  background-image: url('/assets/image/arrow_forward.svg') !important;
+  background-position: 0px 0px !important;
 }

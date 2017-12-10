@@ -245,6 +245,11 @@ var app = {
     })
   },
 
+    showTravellerPicker:function () {
+        console.log("TRAVELLER PICKER");
+        views.flash("modalTravellerPicker");
+    },
+
     //setDates:function(departureDate, returnDate){}
 
   showDatepickerModal:function(){
@@ -252,13 +257,16 @@ var app = {
     views.flash("modalDatepicker", function () {
         console.log("Starting....");
 
-        var dateFormat = 'dd/mm/yy';
+        var dateFormat = 'dd/mm/yyyy';
 
 
 
         $('#datepicker').datepicker({dateFormat: dateFormat,range:true,
             onSelect: function(dates) {
 
+
+                // var a = moment(dates);
+                // console.log("moment date is" + a.format('llll'));
                 console.log("date is this" + dates);
                 dateArray = dates.split(",");
 
@@ -269,13 +277,24 @@ var app = {
                     app.element("modalReturn").innerHTML = "select a date";
                     app.element("toolbarReturn").innerHTML = "select a date"
                 } else {
-                    app.element("modalReturn").innerHTML = dateArray[1];
-                    app.element("toolbarReturn").innerHTML = dateArray[1];
+                  ReturnDateArray = moment( dateArray[1], 'DD/MM/YYYY', true).format('llll').split(",");
+                  console.log("ReturnDateArray - " + ReturnDateArray);
+                  console.log(ReturnDateArray);
+                  console.log(ReturnDateArray[0] + "," + ReturnDateArray[1]);
+                  ReturnDate = ReturnDateArray[0] + "," + ReturnDateArray[1];
+                    app.element("toolbarReturn").innerHTML = ReturnDate;
+
+                    app.element("modalReturn").innerHTML = ReturnDate;
+                   // app.element("modalReturn").innerHTML = dateArray[1];
+                   // app.element("toolbarReturn").innerHTML = ReturnDateArray[0] + ", " + ReturnDateArray[1];
 
                 }
+                departureDateArray = moment( dateArray[0], 'DD/MM/YYYY', true).format('llll').split(",");
+                departureDate = departureDateArray[0] + "," + departureDateArray[1];
 
-                app.element("modalDeparture").innerHTML = dateArray[0];
-                app.element("toolbarDeparture").innerHTML = dateArray[0];
+
+                app.element("modalDeparture").innerHTML = departureDate;
+                app.element("toolbarDeparture").innerHTML = departureDate;
 
 
             }

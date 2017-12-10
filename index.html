@@ -681,7 +681,76 @@
 
     <div id="modalTravellerPicker">
       <div class="modal">
-TRAVELLER PICKER
+
+        <div class="modal_header">
+          <div class="modal_action" onclick="app.closeDatepickerModal()">
+            <img src="assets/image/cancel.svg">
+          </div>
+
+          <div class="menu_dropdown_header ">
+            <span class="menu_dropdown_header_title">How many people are travelling ?</span>
+          </div>
+
+
+        </div>
+        <!-- PEOPLE MENU -->
+        <div class="menu_dropdown">
+
+          <div class="menu_dropdown_lists">
+            <div class="menu_dropdown_list">
+              <div class="menu_dropdown_list_traveller">
+                <p class="menu_dropdown_list_age_grade">Adult</p>
+                <p class="menu_dropdown_list_age">12+yrs</p>
+              </div>
+              <div class="menu_dropdown_list_select">
+                <button class="menu_dropdown_list_count">
+                  <img src="assets/image/decrease.svg">
+                </button>
+                <p id="adultCount" class="menu_dropdown_list_counter"> 12</p>
+                <button class="menu_dropdown_list_count" onclick="app.increment('adultCount')" >
+                  <img src="assets/image/increase.svg">
+                </button>
+              </div>
+            </div>
+            <div class="menu_dropdown_list menu_dropdown_list_even">
+              <div class="menu_dropdown_list_traveller">
+                <p class="menu_dropdown_list_age_grade">Children</p>
+                <p class="menu_dropdown_list_age">2 - 11yrs</p>
+              </div>
+              <div class="menu_dropdown_list_select">
+                <button class="menu_dropdown_list_count" >
+                  <img src="assets/image/decrease.svg">
+                </button>
+                <p class="menu_dropdown_list_counter">23</p>
+                <button class="menu_dropdown_list_count" >
+                  <img src="assets/image/increase.svg">
+                </button>
+              </div>
+            </div>
+            <div class="menu_dropdown_list ">
+              <div class="menu_dropdown_list_traveller">
+                <p class="menu_dropdown_list_age_grade">Infants</p>
+                <p class="menu_dropdown_list_age">under 2yrs</p>
+              </div>
+              <div class="menu_dropdown_list_select">
+                <button class="menu_dropdown_list_count">
+                  <img src="assets/image/decrease.svg">
+                </button>
+                <p class="menu_dropdown_list_counter">56</p>
+                <button class="menu_dropdown_list_count" >
+                  <img src="assets/image/increase.svg">
+                </button>
+              </div>
+            </div>
+            <div class="container_menu_list_btn">
+              <button class="book_btn menu_list_btn">
+                CONTINUE
+                <img class="icon_text" src="assets/image/arrow_next.svg">
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>

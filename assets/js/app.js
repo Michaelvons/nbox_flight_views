@@ -245,6 +245,16 @@ var app = {
     })
   },
 
+    increment:function (identifier) {
+console.log("increment for - " + identifier);
+
+        count = parseInt(app.element(identifier).innerHTML);
+count += 1;
+app.element(identifier).innerHTML = count;
+console.log("value is - " + count);
+//app.element(identifier).innerHTML = "0";
+    },
+
     showTravellerPicker:function () {
         console.log("TRAVELLER PICKER");
         views.flash("modalTravellerPicker");

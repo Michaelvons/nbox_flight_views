@@ -67,7 +67,7 @@
               <p class="toolbar_option_title">Departure</p>
               <p class="toolbar_option_text">TUE, AUG 25</p>
             </div>
-            <div class="toolbar_option">
+            <div class="toolbar_option" onclick="app.showDatepickerModal()">
               <p class="toolbar_option_title">Return</p>
               <p class="toolbar_option_text">THU, AUG 27</p>
             </div>
@@ -650,13 +650,14 @@
 <div id="modalDatepicker" class="modalDatepicker">
 
 <div class="modal">
-<!-- <div class="modalHeader"> -->
-<!--<p class="closeDatepickerModal" onclick="app.closeDatepickerModal()">CLOSE MODAL</p>-->
-<!--   <div class="closeDatepickerModal" onclick="app.closeDatepickerModal()">CLOSE MODAL</div> -->
-<!--   </div> -->
+
 
     <div class="modal_header">
+      <div class="modal_action" onclick="app.closeDatepickerModal()">
+        <img src="assets/image/cancel.svg">
+      </div>
 
+      <div class="modal_date_details">
         <div class="modal_date_detail">
             <span> Departure <p id="modalDeparture" class="modal_date">Select a date</p></span>
 
@@ -665,6 +666,7 @@
             <span> Return <p id="modalReturn" class="modal_date">select a date</p></span>
 
         </div>
+      </div>
 
         <!--<span> Departure <p id="modalDeparture" class="modalDeparture">Select a date</p></span>-->
         <!--<span> Return <p id="modalReturn" class="modalReturn">select a date</p></span>-->

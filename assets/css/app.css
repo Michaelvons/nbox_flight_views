@@ -1228,6 +1228,7 @@ display:flex;
   color: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 
 }
 
@@ -1312,6 +1313,7 @@ font-family: Hind-Medium;
   flex-grow: 1;
   justify-content:  center;
   display: flex;
+  /* font-size: 14px; */
   padding: 16px;
   text-align: center;
 }
@@ -1321,9 +1323,51 @@ font-family: Hind-Medium;
 }
 
 .modal_date{
-  font-family: Hind-Bold;
+  font-family: Hind-Semibold;
   justify-content: center;
   text-align: center;
   display:  flex;
   flex-grow: 1;
+  font-size:16px
+}
+
+.datepicker--content{
+  height:400px
+}
+
+.datepicker--cells{
+  height:100%;
+  font-size: 20px;
+}
+
+.datepicker--nav{
+padding: 16px !important;
+font-size: 16px;
+}
+
+.datepicker--days-names{
+  margin: 16px 0px !important;
+font-size: 16px !important;
+}
+
+.datepicker--cell-day{
+  height:50px !important;
+}
+
+.datepicker--cell.-range-from-{
+  border-radius: 50px 0 0 50px !important;
+}
+
+.datepicker--cell.-range-to-{
+  border-radius: 0 50px 50px 0 !important;
+}
+
+.modal_date_details{
+  display: flex;
+}
+
+.modal_action{
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 16px 0px 0px;
 }

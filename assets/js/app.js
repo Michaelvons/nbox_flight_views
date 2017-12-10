@@ -247,7 +247,7 @@ var app = {
 
   showDatepickerModal:function(){
     console.log("showDatePicker");
-    views.overlay("modalDatepicker",55, function () {
+    views.flash("modalDatepicker", function () {
         console.log("Starting....");
 
         var dateFormat = 'dd/mm/yy';

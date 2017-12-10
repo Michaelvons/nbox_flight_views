@@ -245,6 +245,8 @@ var app = {
     })
   },
 
+    //setDates:function(departureDate, returnDate){}
+
   showDatepickerModal:function(){
     console.log("showDatePicker");
     views.flash("modalDatepicker", function () {
@@ -265,12 +267,15 @@ var app = {
                 if(dateArray.length  < 2){
                     console.log("no return");
                     app.element("modalReturn").innerHTML = "select a date";
+                    app.element("toolbarReturn").innerHTML = "select a date"
                 } else {
                     app.element("modalReturn").innerHTML = dateArray[1];
+                    app.element("toolbarReturn").innerHTML = dateArray[1];
 
                 }
 
                 app.element("modalDeparture").innerHTML = dateArray[0];
+                app.element("toolbarDeparture").innerHTML = dateArray[0];
 
 
             }

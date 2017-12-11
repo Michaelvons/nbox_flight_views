@@ -243,6 +243,16 @@ var app = {
     })
   },
 
+    closeCabinpickerModal:function () {
+        console.log("close closeCabinpickerModal");
+        views.hideFlash('modalCabinClassPicker');
+    },
+
+    closeTravellerpickerModal:function () {
+        console.log("close closeTravellerpickerModal");
+        views.hideFlash('modalTravellerPicker');
+    },
+
   flightDetail:function(){
     views.goto("flightDetail", function(){
       console.log("nav to flightDetail");

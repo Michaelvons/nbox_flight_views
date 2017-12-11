@@ -73,7 +73,7 @@
             </div>
             <div class="toolbar_option" onclick="app.showTravellerPicker()">
               <p class="toolbar_option_title">Travellers</p>
-              <p class="toolbar_option_text">4 PEOPLE</p>
+              <p id="toolbarTotalTraveller" class="toolbar_option_text">4 PEOPLE</p>
             </div>
           </div>
           <div class="toolbar_options toolbar_options_2">
@@ -743,7 +743,7 @@
               </div>
             </div>
             <div class="container_menu_list_btn">
-              <button class="book_btn menu_list_btn">
+              <button class="book_btn menu_list_btn" onclick="app.travellerNext()">
                 CONTINUE
                 <img class="icon_text" src="assets/image/arrow_next.svg">
               </button>

@@ -245,6 +245,18 @@ var app = {
     })
   },
 
+    travellerNext:function () {
+        adult = parseInt(app.element('adultCount').innerHTML);
+        children = parseInt(app.element('childrenCount').innerHTML);
+        infant = parseInt(app.element('infantCount').innerHTML);
+
+        totalTraveller = adult + children + infant;
+
+        app.element('toolbarTotalTraveller').innerHTML = totalTraveller + " PEOPLE";
+        //views.hideFlash()
+        views.hideFlash("modalTravellerPicker");
+    },
+
     increment:function (identifier) {
 console.log("increment for - " + identifier);
 

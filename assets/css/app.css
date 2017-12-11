@@ -570,7 +570,7 @@ footer p{
   top: 50%;
   left: 0%;
   transform: translate(-50%, -50%);
-  background-image: url('/assets/image/bg_night.jpg');
+  background-image: url('/assets/image/bg_day.jpg');
   background-size: contain;
   background-position: right;
   /*background-repeat: no-repeat;*/

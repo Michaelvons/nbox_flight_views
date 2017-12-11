@@ -255,6 +255,21 @@ console.log("value is - " + count);
 //app.element(identifier).innerHTML = "0";
     },
 
+    decrement:function(identifier){
+
+    console.log("decrement clicked");
+    console.log("decrement for" + identifier);
+        count = parseInt(app.element(identifier).innerHTML);
+    if(count == 0){
+        app.element(identifier).innerHTML = "0";
+    }else{
+        count -= 1;
+        app.element(identifier).innerHTML = count;
+    }
+
+
+    },
+
     showTravellerPicker:function () {
         console.log("TRAVELLER PICKER");
         views.flash("modalTravellerPicker");

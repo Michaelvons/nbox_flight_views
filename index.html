@@ -703,7 +703,7 @@
                 <p class="menu_dropdown_list_age">12+yrs</p>
               </div>
               <div class="menu_dropdown_list_select">
-                <button class="menu_dropdown_list_count">
+                <button class="menu_dropdown_list_count" onclick="app.decrement('adultCount')">
                   <img src="assets/image/decrease.svg">
                 </button>
                 <p id="adultCount" class="menu_dropdown_list_counter"> 12</p>
@@ -718,11 +718,11 @@
                 <p class="menu_dropdown_list_age">2 - 11yrs</p>
               </div>
               <div class="menu_dropdown_list_select">
-                <button class="menu_dropdown_list_count" >
+                <button class="menu_dropdown_list_count" onclick="app.decrement('childrenCount')">
                   <img src="assets/image/decrease.svg">
                 </button>
-                <p class="menu_dropdown_list_counter">23</p>
-                <button class="menu_dropdown_list_count" >
+                <p id="childrenCount" class="menu_dropdown_list_counter">23</p>
+                <button class="menu_dropdown_list_count" onclick="app.increment('childrenCount')" >
                   <img src="assets/image/increase.svg">
                 </button>
               </div>
@@ -733,11 +733,11 @@
                 <p class="menu_dropdown_list_age">under 2yrs</p>
               </div>
               <div class="menu_dropdown_list_select">
-                <button class="menu_dropdown_list_count">
+                <button class="menu_dropdown_list_count" onclick="app.decrement('infantCount')">
                   <img src="assets/image/decrease.svg">
                 </button>
-                <p class="menu_dropdown_list_counter">56</p>
-                <button class="menu_dropdown_list_count" >
+                <p id="infantCount" class="menu_dropdown_list_counter">56</p>
+                <button class="menu_dropdown_list_count" onclick="app.increment('infantCount')">
                   <img src="assets/image/increase.svg">
                 </button>
               </div>

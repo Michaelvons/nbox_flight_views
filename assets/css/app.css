@@ -1445,9 +1445,28 @@ font-size: 16px !important;
 .container_menu_list_btn{
   display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 32px 24px;
 }
 
 .menu_list_btn{
   width: 300px !important;
+}
+
+.modal_traveller_option{
+  font-family: Hind-Medium;
+  font-size: 16px;
+  color: black;
+  border-bottom: 1px solid #E7F1FF;
+  padding: 24px;
+  display: flex;
+}
+
+.modal_traveller_option_active{
+  background-color: black;
+  color: white;
+}
+
+.menu_list_indicator{
+  width: 16px;
+  margin-right: 16px;
 }

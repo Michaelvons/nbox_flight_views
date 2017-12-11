@@ -233,6 +233,10 @@ var app = {
     })
   },
 
+    showCabinClass:function () {
+        views.flash('modalCabinClassPicker');
+    },
+
   travellerDetail:function(){
     views.goto("travellerDetail", function(){
       console.log("nav to travellerDetail");

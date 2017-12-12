@@ -741,13 +741,13 @@ footer p{
   background-color: #43993C;
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   font-size: 16px;
   font-family: Hind-Medium;
   align-items: center;
   padding: 16px;
   border-radius: 50px;
-  width: 220px;
+  width: 250px;
 }
 
 .card_icon_text{
@@ -1032,16 +1032,9 @@ position: relative;
 }
 
 .btn_next_traveller{
-  background-color: #43993C;
-  color: white;
-  padding: 16px 32px;
+
   margin-top: 32px;
-  font-size: 18px;
-  width: 300px;
-  border-radius: 50px;
-  justify-content: space-around;
-  font-family: Hind-Bold;
-  display: flex;
+
 }
 
 .card_traveller_form{
@@ -1482,4 +1475,53 @@ font-size: 16px !important;
 .menu_list_indicator{
   width: 16px;
   margin-right: 16px;
+}
+
+.motion_arrow{
+  position: absolute;
+  /* left: 0; */
+  /* background-color: red; */
+  /* width: 80px; */
+  /* height: 80px; */
+  display: block;
+  margin-left: 16px;
+  top: 0;
+  /*x-transition: all 1s ease-in-out;*/
+  /*-webkit-animation: ani 1.7s infinite;*/
+  -webkit-animation: backandforth 2s ease 0s;
+  -webkit-animation-iteration-count:infinite;
+  animation: backandforth 2s ease 0s;
+  animation-iteration-count:infinite;
+  width: 24px;
+  }
+
+@-webkit-keyframes ani {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 720px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+
+@-webkit-keyframes backandforth {0%{left:0;} 50%{left:58%;} 100%{left:0;}}
+
+@keyframes backandforth {0%{left:0;} 50%{left:100%;} 100%{left:0;}}
+
+
+.path {
+  position: relative;
+  /* overflow: hidden; */
+  width: 15px;
+  height: 10px;
+  /* display: flex; */
+  /* background-color: #c1c1c1; */
+  /* align-items: center; */
+  /* display:  flex; */
+  top: -5px;
+  /* margin: auto; */
 }

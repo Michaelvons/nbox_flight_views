@@ -147,6 +147,39 @@ var app = {
     });
   },
 
+    cabinSelect:function (cabinID, cabinMessage, cabinLength) {
+        console.log("cabinSelect");
+        app.element('cabin_menu_list_' + cabinID).classList.add("modal_traveller_option_active");
+        app.element('cabin_menu_list_'+cabinID).innerHTML = "<img id='menu_list_indicator' class='menu_list_indicator' src='../assets/image/plane.svg'>" +cabinMessage;
+app.element('toolbarCabinClass').innerHTML = cabinMessage;
+
+        cabins = [];
+        cabinsLength = cabinLength +1;
+
+        var inactiveCabins;
+
+        for (var i = 1; i < cabinsLength; i++){
+            cabins.push(i);
+
+            if(cabinLength == cabins.length){
+              cabinIndex = cabins.indexOf(parseInt(cabinID));
+
+                inactiveCabins = cabins.splice(cabinIndex,1);
+            }
+        }
+
+       // console.log(cabins);
+
+        console.log(inactiveCabins);
+       //
+       for(var i = 0; i < cabins.length; i++){
+          app.element("cabin_menu_list_"+cabins[i]).classList.remove("modal_traveller_option_active");
+          // app.element('menu_list_indicator'+cabins[i]).style.display =  cabinMessage;
+          // app.element("menu_list_indicator").style.display = "none";
+
+       }
+    },
+
   tabSelect:function(tabID, tabLength){
     app.element("toolbar_menu_"+tabID).classList.add("menu_active");
 
@@ -175,14 +208,7 @@ var app = {
       app.element("toolbar_menu_"+tabs[i]).classList.remove("menu_active");
     }
 
-    // if(tabID == 2){
-    //   //console.log("ONE WAY SELECTED");
-    //   //WHEN THE one way TAB IS SELECTED
-    //   app.element("departure").style.display = "none";
-    //   app.element("toolbar_plane").style.display = "none";
-    //   //  app.element("toolbar_destination").style.text-align = "center";
-    //   app.element("toolbar_destination").classList.add("centralize");
-    // }
+
     switch(tabID) {
       case '1':
       console.log(tabID);
@@ -225,6 +251,108 @@ var app = {
       app.animatePreloader();
     })
   },
+
+    addFlight:function () {
+
+
+        var initialNames =  JSON.parse(localStorage.getItem("names"));
+        console.log("initialNames");
+        console.log(initialNames);
+if(initialNames == null){
+
+  console.log("record is empty. Adding Record");
+    var names = [];
+
+
+    console.log("names array");
+    console.log(names);
+
+    arrayValue = {departure: "love", arrival: "love"};
+
+    names.unshift(arrayValue);
+
+    localStorage.setItem("names", JSON.stringify(names));
+
+    var storedNames = JSON.parse(localStorage.getItem("names"));
+    console.log("storedNames");
+    console.log(storedNames);
+    console.log(storedNames.length);
+
+
+   // console.log(flightList);
+    app.element("flight_list").innerHTML = "<p>flight listed</p>";
+
+
+    var dparture = JSON.parse(localStorage.destination);
+    console.log(dparture.departure);
+
+}else {
+  console.log("there is a record. Retrieve and Add Record");
+
+
+
+
+    var names = initialNames;
+
+
+    console.log("names array");
+    console.log(names);
+
+    arrayValue = {departure: "love", arrival: "love"};
+
+    names.unshift(arrayValue);
+
+
+
+
+    localStorage.setItem("names", JSON.stringify(names));
+
+    var storedNames = JSON.parse(localStorage.getItem("names"));
+    console.log("storedNames");
+    console.log(storedNames);
+    console.log(storedNames.length);
+
+
+    text = "<ul>";
+    for (i = 0; i < storedNames.length; i++) {
+         text += "<li>" + storedNames[i] + "</li>";
+        app.element("flight_list").innerHTML = text;
+       // app.element("flight_list").innerHTML = "<p> flight journeys</p>";
+        console.log("repeating records");
+
+    }
+    //
+    // text = "<ul>";
+    // for (i = 0; i < fLen; i++) {
+    //     text += "<li>" + fruits[i] + "</li>";
+    // }
+    // Try it Yourself »
+
+
+
+
+
+    console.log(flightList);
+   // app.element("flight_list").innerHTML = "<p>flight listed</p>";
+
+    localStorage.destination = JSON.stringify(destination);
+
+    var dparture = JSON.parse(localStorage.destination);
+    console.log(dparture.departure);
+
+
+    //app.element("flight_list").innerHTML = "<p>"+ text +"</p>";
+
+
+    //localStorage.clear();
+}
+
+
+
+
+
+
+    },
 
 
   searchResult:function(){
@@ -269,6 +397,10 @@ var app = {
         app.element('toolbarTotalTraveller').innerHTML = totalTraveller + " PEOPLE";
         //views.hideFlash()
         views.hideFlash("modalTravellerPicker");
+    },
+
+    cabinClassNext:function () {
+        views.hideFlash('modalCabinClassPicker');
     },
 
     increment:function (identifier) {

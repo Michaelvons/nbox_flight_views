@@ -1462,8 +1462,8 @@ font-size: 16px !important;
 }
 
 .modal_traveller_option_active{
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
 }
 
 .menu_list_indicator{

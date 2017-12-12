@@ -59,8 +59,10 @@
             <input type="text" placeholder="LHR">
             <p id="arrival_city" class="destination">ARRIVAL CITY</p>
           </div>
-          <img id="toolbar_plus" src="assets/image/destination_plus.svg">
+          <img id="toolbar_plus" src="assets/image/destination_plus.svg" onclick="app.addFlight()">
+
         </div>
+        <div id="flight_list"></div>
         <div class="container_toolbar_options">
           <div class="toolbar_options toolbar_options_1">
             <div class="toolbar_option"  onclick="app.showDatepickerModal()">
@@ -79,7 +81,7 @@
           <div class="toolbar_options toolbar_options_2">
             <div class="toolbar_option" onclick="app.showCabinClass()">
               <p class="toolbar_option_title">Cabin Class</p>
-              <p class="toolbar_option_text">ECONOMY</p>
+              <p id="toolbarCabinClass" class="toolbar_option_text">ECONOMY</p>
             </div>
             <button class="toolbar_option toolbar_option_btn" onclick="app.searchPreloader()">
               SEARCH
@@ -766,7 +768,7 @@
             <img src="assets/image/cancel.svg">
           </div>
 
-          <div class="menu_dropdown_header ">
+          <div class="menu_dropdown_header">
             <span class="menu_dropdown_header_title">Select a Cabin Class</span>
           </div>
 
@@ -774,18 +776,18 @@
         </div>
         <div class="modal_body">
 
-          <div class="modal_traveller_option">
+          <div id="cabin_menu_list_1" class="modal_traveller_option" onclick="app.cabinSelect('1','First Class', 3)">
             First Class
           </div>
-          <div class="modal_traveller_option modal_traveller_option_active">
+          <div id="cabin_menu_list_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.cabinSelect('2','Business', 3)">
             <img class="menu_list_indicator" src="assets/image/plane.svg">
             Business
           </div>
-          <div class="modal_traveller_option">
+          <div id="cabin_menu_list_3" class="modal_traveller_option" onclick="app.cabinSelect('3','Economy', 3)">
             Economy
           </div>
           <div class="container_menu_list_btn">
-            <button class="book_btn menu_list_btn" onclick="app.travellerNext()">
+            <button class="book_btn menu_list_btn" onclick="app.cabinClassNext()">
               CONTINUE
               <img class="icon_text" src="assets/image/arrow_next.svg">
             </button>

@@ -216,9 +216,9 @@ app.element('toolbarCabinClass').innerHTML = cabinMessage;
       break;
       case '2':
       console.log(tabID);
-      app.element("departure").style.display = "none";
-      app.element("toolbar_plane").style.display = "none";
-      app.element("toolbar_destination").classList.add("centralize");
+      //app.element("departure").style.display = "none";
+      //app.element("toolbar_plane").style.display = "none";
+     // app.element("toolbar_destination").classList.add("centralize");
       app.element("toolbar_plus").style.display = "none";
       app.element("departure_city").style.display = "flex";
       app.element("arrival_city").style.display = "flex";
@@ -228,8 +228,8 @@ app.element('toolbarCabinClass').innerHTML = cabinMessage;
       app.resetDestination();
       //  app.element("toolbar_plane").style.display = "none";
       app.element("toolbar_plus").style.display = "flex";
-      app.element("departure_city").style.display = "none";
-      app.element("arrival_city").style.display = "none";
+      //app.element("departure_city").style.display = "none";
+     // app.element("arrival_city").style.display = "none";
       break;
       default:
       console.log("tabID");
@@ -280,11 +280,11 @@ if(initialNames == null){
 
 
    // console.log(flightList);
-    app.element("flight_list").innerHTML = "<p>flight listed</p>";
+   // app.element("flight_list").innerHTML = "<p>flight listed</p>";
 
 
-    var dparture = JSON.parse(localStorage.destination);
-    console.log(dparture.departure);
+    //var dparture = JSON.parse(localStorage.destination);
+    //console.log(dparture.departure);
 
 }else {
   console.log("there is a record. Retrieve and Add Record");
@@ -298,9 +298,11 @@ if(initialNames == null){
     console.log("names array");
     console.log(names);
 
-    arrayValue = {departure: "love", arrival: "love"};
+    departureValue = app.element('toolbarDepartureCityAlias').value;
+    ArrivalValue = app.element('toolbarArrivalCityAlias').value;
+    arrayValue = {departure: departureValue, arrival: ArrivalValue};
 
-    names.unshift(arrayValue);
+    names.unshift(arrayValue);;
 
 
 
@@ -315,7 +317,7 @@ if(initialNames == null){
 
     text = "<ul>";
     for (i = 0; i < storedNames.length; i++) {
-         text += "<li>" + storedNames[i].departure + "</li>";
+         text += "<li>" + storedNames[i].departure +" - " + storedNames[i].arrival + "</li>";
         app.element("flight_list").innerHTML = text;
        // app.element("flight_list").innerHTML = "<p> flight journeys</p>";
         console.log("repeating records");

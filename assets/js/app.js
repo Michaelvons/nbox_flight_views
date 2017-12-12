@@ -315,7 +315,7 @@ if(initialNames == null){
 
     text = "<ul>";
     for (i = 0; i < storedNames.length; i++) {
-         text += "<li>" + storedNames[i] + "</li>";
+         text += "<li>" + storedNames[i].departure + "</li>";
         app.element("flight_list").innerHTML = text;
        // app.element("flight_list").innerHTML = "<p> flight journeys</p>";
         console.log("repeating records");

@@ -173,6 +173,15 @@ var app = {
 
     },
 
+    filterResult:function () {
+        console.log("filterResult clicked");
+        views.flash("modalFilterResult");
+    },
+
+    closeFilterResultModal:function () {
+        views.hideFlash("modalFilterResult");
+    },
+
     filterPriceGroup:function () {
         console.log("filterGroup clicked");
 
@@ -226,7 +235,7 @@ var app = {
     cabinSelect:function (cabinID, cabinMessage, cabinLength) {
         console.log("cabinSelect");
         app.element('cabin_menu_list_' + cabinID).classList.add("modal_traveller_option_active");
-        app.element('cabin_menu_list_'+cabinID).innerHTML = "<img id='menu_list_indicator' class='menu_list_indicator' src='../assets/image/plane.svg'>" +cabinMessage;
+        app.element('cabin_menu_list_'+cabinID).innerHTML =  cabinMessage;
 app.element('toolbarCabinClass').innerHTML = cabinMessage;
 
         cabins = [];
@@ -250,10 +259,69 @@ app.element('toolbarCabinClass').innerHTML = cabinMessage;
        //
        for(var i = 0; i < cabins.length; i++){
           app.element("cabin_menu_list_"+cabins[i]).classList.remove("modal_traveller_option_active");
-          // app.element('menu_list_indicator'+cabins[i]).style.display =  cabinMessage;
+          // app.element('cabin_menu_list_'+cabins[i]).innerHTML = cabinMessage;
+
+           // switch(cabinID) {
+           //     case '1':
+           //         console.log('FIRST CLASS SWICTCH');
+           //         app.element('cabin_menu_list_'+cabinID).innerHTML = "First Class";
+           //
+           //         break;
+           //     case '2':
+           //         console.log('BUSINESS CLASS SWICTCH');
+           //         app.element('cabin_menu_list_'+cabinID).innerHTML = "Business";
+           //
+           //         break;
+           //     default:
+           //         console.log('ERROR SWICTH ');
+           // }
+
+           // app.element('menu_list_indicator'+cabins[i]).style.display =  cabinMessage;
           // app.element("menu_list_indicator").style.display = "none";
 
        }
+    },
+
+    filterResultSelect:function (listID, listLength) {
+        app.element('filter_result_' + listID).classList.add("modal_traveller_option_active");
+
+        lists = [];
+        listsLength = listLength +1;
+
+        var inactiveLists;
+
+        for (var i = 1; i < listsLength; i++){
+            lists.push(i);
+
+            if(listLength == lists.length){
+                listIndex = lists.indexOf(parseInt(listID));
+
+                inactiveLists = lists.splice(listIndex,1);
+            }
+        }
+
+
+        for (var i = 0; i < lists.length; i++) {
+            app.element("filter_result_"+lists[i]).classList.remove("modal_traveller_option_active");
+        }
+
+
+    },
+
+    showMenu:function () {
+
+    if(!views.revealView){
+        views.reveal("homeMenu");
+    }else{
+      app.closeHomeMenu();
+    }
+
+
+    },
+    
+    
+    closeHomeMenu:function () {
+        views.hideReveal();
     },
 
   tabSelect:function(tabID, tabLength){

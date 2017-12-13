@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88627098-a08f-4771-bb2d-d1567b24d931" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -21,8 +19,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="946">
-                  <caret line="403" column="40" lean-forward="false" selection-start-line="403" selection-start-column="24" selection-end-line="403" selection-end-column="40" />
+                <state relative-caret-position="241">
+                  <caret line="36" column="78" lean-forward="false" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
                   <folding />
                 </state>
               </provider>
@@ -42,7 +40,7 @@
             <entry file="file://$PROJECT_DIR$/assets/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="6285">
-                  <caret line="465" column="29" lean-forward="false" selection-start-line="465" selection-start-column="29" selection-end-line="465" selection-end-column="29" />
+                  <caret line="533" column="29" lean-forward="false" selection-start-line="533" selection-start-column="29" selection-end-line="533" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -55,8 +53,8 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="760">
-                  <caret line="220" column="12" lean-forward="false" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
+                <state relative-caret-position="535">
+                  <caret line="309" column="0" lean-forward="true" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -65,8 +63,8 @@
           <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/css/app.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15510">
-                  <caret line="1034" column="0" lean-forward="false" selection-start-line="1034" selection-start-column="0" selection-end-line="1034" selection-end-column="0" />
+                <state relative-caret-position="218">
+                  <caret line="1450" column="25" lean-forward="true" selection-start-line="1450" selection-start-column="25" selection-end-line="1450" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -96,6 +94,8 @@
       <find>keyframes</find>
       <find>btn_next_traveller</find>
       <find>datepicker</find>
+      <find>filterGroup</find>
+      <find>menu_list_btn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,8 +106,8 @@
       <list>
         <option value="$PROJECT_DIR$/datepicker.html" />
         <option value="$PROJECT_DIR$/assets/css/app.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -205,12 +205,12 @@
       <workItem from="1512896292664" duration="15051000" />
       <workItem from="1512990171236" duration="310000" />
       <workItem from="1512990561626" duration="31186000" />
-      <workItem from="1513149597159" duration="4054000" />
+      <workItem from="1513149597159" duration="8932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69481000" />
+    <option name="totallyTimeSpent" value="74359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -482,24 +482,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15510">
-          <caret line="1034" column="0" lean-forward="false" selection-start-line="1034" selection-start-column="0" selection-end-line="1034" selection-end-column="0" />
+        <state relative-caret-position="218">
+          <caret line="1450" column="25" lean-forward="true" selection-start-line="1450" selection-start-column="25" selection-end-line="1450" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="403" column="40" lean-forward="false" selection-start-line="403" selection-start-column="24" selection-end-line="403" selection-end-column="40" />
+        <state relative-caret-position="241">
+          <caret line="36" column="78" lean-forward="false" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="220" column="12" lean-forward="false" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
+        <state relative-caret-position="535">
+          <caret line="309" column="0" lean-forward="true" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -29,12 +29,12 @@
 
     <!-- VIEW -->
     <!-- HOME VIEW -->
-    <div id="home" class="view" data-statusbar="white">
+    <div id="home" class="view" data-statusbar="white" data-target="homeMenu" data-type="controller">
 
 
       <div class="toolbar">
         <div class="toolbar_menu">
-          <img src="assets/image/arrow_back_white.svg">
+          <img src="assets/image/arrow_back_white.svg" onclick="app.showMenu()">
           <div id="toolbar_menu_1" class="menu menu_active" onclick="app.tabSelect('1',3)">
             RETURN
           </div>
@@ -276,7 +276,7 @@
           <img src="assets/image/tag.svg">
           <p id="filterPriceGroup" class="">Price Per Person</p>
         </div>
-        <div class="search_toolbar_option">
+        <div class="search_toolbar_option" onclick="app.filterResult()">
           <img src="assets/image/filter.svg">
           <p class="">Filter Results</p>
         </div>
@@ -798,7 +798,7 @@
             First Class
           </div>
           <div id="cabin_menu_list_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.cabinSelect('2','Business', 3)">
-            <img class="menu_list_indicator" src="assets/image/plane.svg">
+            <!--<img class="menu_list_indicator" src="assets/image/plane.svg">-->
             Business
           </div>
           <div id="cabin_menu_list_3" class="modal_traveller_option" onclick="app.cabinSelect('3','Economy', 3)">
@@ -839,6 +839,54 @@
 
       </div>
     </div>
+
+    <!--FILTER RESULT PICKER-->
+    <div id="modalFilterResult">
+      <div class="modal">
+
+        <div class="modal_header">
+          <div class="modal_action" onclick="app.closeFilterResultModal()">
+            <img src="assets/image/cancel.svg">
+          </div>
+
+          <div class="menu_dropdown_header ">
+            <span class="menu_dropdown_header_title">Select Date of Birth</span>
+          </div>
+
+
+        </div>
+
+
+        <div class="modal_body">
+          <div id="filter_result_1" class="modal_traveller_option" onclick="app.filterResultSelect('1', 2)">
+            Time to Complete Journey
+          </div>
+          <div id="filter_result_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.filterResultSelect('2', 2)">
+            <!--<img class="menu_list_indicator" src="assets/image/plane.svg">-->
+            Number of Stops
+          </div>
+
+          <div class="container_menu_list_btn">
+            <button class="book_btn " onclick="app.cabinClassNext()">
+              CONTINUE
+              <span class="path">
+              <img class="icon_text motion_arrow" src="assets/image/arrow_next.svg">
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--SIDENAV-->
+    <div id="homeMenu">
+      SIDE NAV HERE
+    </div>
+
+
 
 
 <audio id="soundPlayer"></audio>

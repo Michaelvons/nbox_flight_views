@@ -147,6 +147,82 @@ var app = {
     });
   },
 
+    titleSelect:function (titleID, titleLength) {
+        app.element('traveller_title_'+titleID).classList.add("card_traveller_option_active");
+
+        titles = [];
+        titlesLength = titleLength +1;
+
+        var inactiveTitles;
+
+        for (var i = 1; i < titlesLength; i++){
+            titles.push(i);
+
+            if(titleLength == titles.length){
+                titleIndex = titles.indexOf(parseInt(titleID));
+
+                inactiveTitles = titles.splice(titleIndex,1);
+            }
+        }
+
+
+        for(var i = 0; i < titles.length; i++){
+            app.element("traveller_title_"+titles[i]).classList.remove("card_traveller_option_active");
+
+        }
+
+    },
+
+    filterPriceGroup:function () {
+        console.log("filterGroup clicked");
+
+        value =  app.element("filterPriceGroup").innerHTML;
+
+       var fees = 398500;
+
+        if(value === "Price Per Person"){
+            app.element("filterPriceGroup").innerHTML = "Price Per Group";
+           // console.log(app.element('btn_multi_amount').innerHTML);
+            multiAmountValue = app.element('btn_multi_amount').innerHTML;
+            singleAmountValue = app.element('btn_single_amount').innerHTML;
+
+            var multiAmount = parseInt(multiAmountValue.replace(/,/g, ''));
+            var singleAmount = parseInt(singleAmountValue.replace(/,/g, ''));
+
+          //  console.log(multiAmount);
+
+            singleTotal = fees.toLocaleString();
+            multiTotal = fees.toLocaleString();
+
+            app.element("btn_multi_amount").innerHTML = multiTotal;
+            app.element("btn_single_amount").innerHTML = singleTotal;
+
+
+            //console.log(total);
+        }else{
+            app.element("filterPriceGroup").innerHTML = "Price Per Person";
+           // console.log(app.element('btn_amount').innerHTML);
+            multiAmountValue = app.element('btn_multi_amount').innerHTML;
+            singleAmountValue = app.element('btn_single_amount').innerHTML;
+
+            var multiAmount = parseInt(multiAmountValue.replace(/,/g, ''));
+            var singleAmount = parseInt(singleAmountValue.replace(/,/g, ''));
+
+            // console.log(multiAmount);
+
+            singleTotal = (singleAmount / 2).toLocaleString();
+            multiTotal = (multiAmount / 2).toLocaleString();
+
+
+            app.element("btn_multi_amount").innerHTML = multiTotal;
+            app.element("btn_single_amount").innerHTML = singleTotal;
+
+
+          //  console.log(total);
+
+        }
+    },
+
     cabinSelect:function (cabinID, cabinMessage, cabinLength) {
         console.log("cabinSelect");
         app.element('cabin_menu_list_' + cabinID).classList.add("modal_traveller_option_active");
@@ -363,10 +439,30 @@ if(initialNames == null){
     })
   },
 
+    ShowModalTravellerDatepicker:function () {
+        views.flash("modalTravellerDatepicker");
+
+        $('#datepickerTraveller').datepicker( {dateFormat:"dd/M/yyyy",
+            onSelect: function(date) {
+              console.log(date);
+                dateArray = date.split("/");
+                console.log(dateArray);
+                app.element('travellerDobDate').innerHTML = dateArray[0];
+                app.element('travellerDobMonth').innerHTML = dateArray[1];
+
+                app.element('travellerDobYear').innerHTML = dateArray[2];
+
+            }
+        });
+    },
+
     showCabinClass:function () {
         views.flash('modalCabinClassPicker');
     },
 
+    closeTravellerDatepickerModal:function () {
+        views.hideFlash("modalTravellerDatepicker");
+    },
   travellerDetail:function(){
     views.goto("travellerDetail", function(){
       console.log("nav to travellerDetail");
@@ -546,7 +642,7 @@ console.log("value is - " + count);
 
   travellerBack:function(){
     console.log("travellerBack");
-    views.goto("home");
+    views.goto("travellerDetail");
   },
 
   searchHistorySelect:function(cardID, cardLength){

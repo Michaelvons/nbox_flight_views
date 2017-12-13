@@ -972,7 +972,7 @@ position: relative;
 .card_traveller_header{
   background-color: #3C7AC9;
   width: 100%;
-  padding: 8px;
+  padding: 8px 16px;
   display: flex;
   justify-content: space-between;
   color: white;

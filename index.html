@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="views/views.css" type="text/css"/>
   <link rel="stylesheet" href="assets/css/swiper.min.css" type="text/css"/>
   <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css"/>
-    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>-->
-    <link rel="stylesheet" href="assets/css/daterangepicker.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/datepicker.min.css">
+  <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>-->
+  <link rel="stylesheet" href="assets/css/daterangepicker.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/datepicker.min.css">
 
 
 </head>
@@ -34,7 +34,7 @@
 
       <div class="toolbar">
         <div class="toolbar_menu">
-          <img src="assets/image/arrow_back_white.svg" onclick="app.showMenu()">
+          <img src="assets/image/arrow_back_white.svg">
           <div id="toolbar_menu_1" class="menu menu_active" onclick="app.tabSelect('1',3)">
             RETURN
           </div>
@@ -44,7 +44,7 @@
           <div id="toolbar_menu_3" class="menu" onclick="app.tabSelect('3',3)">
             MULTI STOP
           </div>
-          <img src="assets/image/menu.svg">
+          <img src="assets/image/menu.svg" onclick="app.showMenu()">
         </div>
         <div id="toolbar_destination" class="toolbar_destination">
           <div id="departure" class="destination_alias">
@@ -62,7 +62,7 @@
           <img id="toolbar_plus" src="assets/image/destination_plus.svg" onclick="app.addFlight()">
 
         </div>
-        <div id="flight_list"></div>
+        <div id="flight_list" class="flight_list"></div>
         <div class="container_toolbar_options">
           <div class="toolbar_options toolbar_options_1">
             <div class="toolbar_option"  onclick="app.showDatepickerModal()">
@@ -113,7 +113,7 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide">
+        <div class="swiper-slide slide_1">
           <div class="card_trending">
             <img class="card_image" src="assets/image/image_1.png">
             <img class="card_flare" src="assets/image/flare.png">
@@ -164,53 +164,53 @@
         <div class="swiper-wrapper">
 
 
-      <!-- SEARCH CARD -->
-          <div class="swiper-slide-history">
-      <div id="card_search_1" class="card_search" onclick="app.searchHistorySelect('1', 3)">
-        <p>Lagos</p>
-        <p>New York</p>
-        <div class="card_suggestion_destination card_suggestion_destination_active">
-          LOS
-          <img id="separator_plane_suggestion_1" class="separator_plane_suggestion" src="assets/image/plane_black.svg">
-          <img id="separator_plane_suggestion_white_1" class="separator_plane_suggestion hidewhitePlane" src="assets/image/plane.svg">
-          JFK
-        </div>
-        <p>5 Travellers</p>
-      </div>
+          <!-- SEARCH CARD -->
+          <div class="swiper-slide-history slide_1">
+            <div id="card_search_1" class="card_search" onclick="app.searchHistorySelect('1', 3)">
+              <p>Lagos</p>
+              <p>New York</p>
+              <div class="card_suggestion_destination card_suggestion_destination_active">
+                LOS
+                <img id="separator_plane_suggestion_1" class="separator_plane_suggestion" src="assets/image/plane_black.svg">
+                <img id="separator_plane_suggestion_white_1" class="separator_plane_suggestion hidewhitePlane" src="assets/image/plane.svg">
+                JFK
+              </div>
+              <p>5 Travellers</p>
+            </div>
           </div>
 
-      <!-- SEARCH CARD -->
+          <!-- SEARCH CARD -->
           <div class="swiper-slide-history">
-      <div id="card_search_2" class="card_search" onclick="app.searchHistorySelect('2',3)">
-        <p>Lagos</p>
-        <p>New York</p>
-        <div class="card_suggestion_destination card_suggestion_destination_active">
-          LOS
-          <img id="separator_plane_suggestion_2" class="separator_plane_suggestion" src="assets/image/plane_black.svg">
-          <img id="separator_plane_suggestion_white_2" class="separator_plane_suggestion hidewhitePlane" src="assets/image/plane.svg">
+            <div id="card_search_2" class="card_search" onclick="app.searchHistorySelect('2',3)">
+              <p>Lagos</p>
+              <p>New York</p>
+              <div class="card_suggestion_destination card_suggestion_destination_active">
+                LOS
+                <img id="separator_plane_suggestion_2" class="separator_plane_suggestion" src="assets/image/plane_black.svg">
+                <img id="separator_plane_suggestion_white_2" class="separator_plane_suggestion hidewhitePlane" src="assets/image/plane.svg">
 
-          JFK
-        </div>
-        <p>5 Travellers</p>
-      </div>
+                JFK
+              </div>
+              <p>5 Travellers</p>
+            </div>
           </div>
 
-      <!-- SEARCH CARD -->
+          <!-- SEARCH CARD -->
           <div class="swiper-slide-history">
-      <div id="card_search_3" class="card_search" onclick="app.searchHistorySelect('3', 3)">
-        <p>Lagos</p>
-        <p>New York</p>
-        <div class="card_suggestion_destination card_suggestion_destination_active">
-          LOS
-          <img id="separator_plane_suggestion_white_3" class="separator_plane_suggestion hidewhitePlane" src="assets/image/plane.svg">
-  <img id="separator_plane_suggestion_3" class="separator_plane_suggestion " src="assets/image/plane_black.svg">
-          JFK
-        </div>
-        <p>5 Travellers</p>
-      </div>
+            <div id="card_search_3" class="card_search" onclick="app.searchHistorySelect('3', 3)">
+              <p>Lagos</p>
+              <p>New York</p>
+              <div class="card_suggestion_destination card_suggestion_destination_active">
+                LOS
+                <img id="separator_plane_suggestion_white_3" class="separator_plane_suggestion hidewhitePlane" src="assets/image/plane.svg">
+                <img id="separator_plane_suggestion_3" class="separator_plane_suggestion " src="assets/image/plane_black.svg">
+                JFK
+              </div>
+              <p>5 Travellers</p>
+            </div>
           </div>
 
-      end here
+          end here
         </div>
       </div>
     </div>
@@ -224,13 +224,14 @@
 <div id="search_preloader" class="view" data-statusbar="white" >
   <div class="main_preloader_container">
     <header>
-      <img class="logo" src="assets/image/logo_nbox_black.svg" >
+      <img id="searchLogo" class="logo" src="assets/image/logo_nbox_black.svg" >
     </header>
 
     <!-- PRELOADER IMAGE -->
     <div class="container_preloader">
       <!-- <img id="sky" class="bg_preloader_day" src="assets/image/bg_night.jpg"> -->
       <div id="sky" class="bg_preloader_day"></div>
+      <div id="sky_night" class="bg_preloader_night"></div>
       <img id="sun" class="sun" src="assets/image/sun.png">
       <img class="bg_preloader" src="assets/image/bg_window.png">
 
@@ -432,7 +433,7 @@
         <button class="book_btn" onclick="app.travellerDetail()">
           BOOK THIS FLIGHT
           <div class="path">
-          <img class="motion_arrow" src="assets/image/arrow_next.svg">
+            <img class="motion_arrow" src="assets/image/arrow_next.svg">
           </div>
         </button>
       </div>
@@ -658,7 +659,7 @@
         <button class="book_btn btn_next_traveller">
           NEXT TRAVELLER
           <div class="path">
-          <img class="btn_icon motion_arrow" src="assets/image/arrow_next.svg">
+            <img class="btn_icon motion_arrow" src="assets/image/arrow_next.svg">
           </div>
         </button>
       </div>
@@ -669,7 +670,7 @@
 <!-- DATE PICKER MODAL -->
 <div id="modalDatepicker" class="">
 
-<div class="modal">
+  <div class="modal">
 
 
     <div class="modal_header">
@@ -679,212 +680,244 @@
 
       <div class="modal_date_details">
         <div class="modal_date_detail">
-            <span> Departure <p id="modalDeparture" class="modal_date">Select a date</p></span>
+          <span> Departure <p id="modalDeparture" class="modal_date">Select a date</p></span>
 
         </div>
         <div class="modal_date_detail">
-            <span> Return <p id="modalReturn" class="modal_date">select a date</p></span>
+          <span> Return <p id="modalReturn" class="modal_date">select a date</p></span>
 
         </div>
       </div>
 
     </div>
 
-     <div id="datepicker" class="modal_datepicker" data-language='en'></div>
+    <div id="datepicker" class="modal_datepicker" data-language='en'></div>
 
   </div>
 
 </div>
 
 
-    <!--TRAVELLER PICKER MODAL-->
+<!--TRAVELLER PICKER MODAL-->
 
-    <div id="modalTravellerPicker">
-      <div class="modal">
+<div id="modalTravellerPicker">
+  <div class="modal">
 
-        <div class="modal_header">
-          <div class="modal_action" onclick="app.closeTravellerpickerModal()">
-            <img src="assets/image/cancel.svg">
-          </div>
-
-          <div class="menu_dropdown_header ">
-            <span class="menu_dropdown_header_title">How many people are travelling ?</span>
-          </div>
-
-
-        </div>
-        <!-- PEOPLE MENU -->
-        <div class="menu_dropdown">
-
-          <div class="menu_dropdown_lists">
-            <div class="menu_dropdown_list">
-              <div class="menu_dropdown_list_traveller">
-                <p class="menu_dropdown_list_age_grade">Adult</p>
-                <p class="menu_dropdown_list_age">12+yrs</p>
-              </div>
-              <div class="menu_dropdown_list_select">
-                <button class="menu_dropdown_list_count" onclick="app.decrement('adultCount')">
-                  <img src="assets/image/decrease.svg">
-                </button>
-                <p id="adultCount" class="menu_dropdown_list_counter"> 12</p>
-                <button class="menu_dropdown_list_count" onclick="app.increment('adultCount')" >
-                  <img src="assets/image/increase.svg">
-                </button>
-              </div>
-            </div>
-            <div class="menu_dropdown_list menu_dropdown_list_even">
-              <div class="menu_dropdown_list_traveller">
-                <p class="menu_dropdown_list_age_grade">Children</p>
-                <p class="menu_dropdown_list_age">2 - 11yrs</p>
-              </div>
-              <div class="menu_dropdown_list_select">
-                <button class="menu_dropdown_list_count" onclick="app.decrement('childrenCount')">
-                  <img src="assets/image/decrease.svg">
-                </button>
-                <p id="childrenCount" class="menu_dropdown_list_counter">23</p>
-                <button class="menu_dropdown_list_count" onclick="app.increment('childrenCount')" >
-                  <img src="assets/image/increase.svg">
-                </button>
-              </div>
-            </div>
-            <div class="menu_dropdown_list ">
-              <div class="menu_dropdown_list_traveller">
-                <p class="menu_dropdown_list_age_grade">Infants</p>
-                <p class="menu_dropdown_list_age">under 2yrs</p>
-              </div>
-              <div class="menu_dropdown_list_select">
-                <button class="menu_dropdown_list_count" onclick="app.decrement('infantCount')">
-                  <img src="assets/image/decrease.svg">
-                </button>
-                <p id="infantCount" class="menu_dropdown_list_counter">56</p>
-                <button class="menu_dropdown_list_count" onclick="app.increment('infantCount')">
-                  <img src="assets/image/increase.svg">
-                </button>
-              </div>
-            </div>
-            <div class="container_menu_list_btn">
-              <button class="book_btn menu_list_btn" onclick="app.travellerNext()">
-                CONTINUE
-                <img class="icon_text" src="assets/image/arrow_next.svg">
-              </button>
-            </div>
-          </div>
-        </div>
-
+    <div class="modal_header">
+      <div class="modal_action" onclick="app.closeTravellerpickerModal()">
+        <img src="assets/image/cancel.svg">
       </div>
 
+      <div class="menu_dropdown_header ">
+        <span class="menu_dropdown_header_title">How many people are travelling ?</span>
+      </div>
+
+
     </div>
+    <!-- PEOPLE MENU -->
+    <div class="menu_dropdown">
 
-    <!--CABIN CLASS PICKER-->
-
-    <div id="modalCabinClassPicker">
-      <div class="modal">
-
-
-        <div class="modal_header">
-          <div class="modal_action" onclick="app.closeCabinpickerModal()">
-            <img src="assets/image/cancel.svg">
+      <div class="menu_dropdown_lists">
+        <div class="menu_dropdown_list">
+          <div class="menu_dropdown_list_traveller">
+            <p class="menu_dropdown_list_age_grade">Adult</p>
+            <p class="menu_dropdown_list_age">12+yrs</p>
           </div>
-
-          <div class="menu_dropdown_header">
-            <span class="menu_dropdown_header_title">Select a Cabin Class</span>
-          </div>
-
-
-        </div>
-        <div class="modal_body">
-
-          <div id="cabin_menu_list_1" class="modal_traveller_option" onclick="app.cabinSelect('1','First Class', 3)">
-            First Class
-          </div>
-          <div id="cabin_menu_list_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.cabinSelect('2','Business', 3)">
-            <!--<img class="menu_list_indicator" src="assets/image/plane.svg">-->
-            Business
-          </div>
-          <div id="cabin_menu_list_3" class="modal_traveller_option" onclick="app.cabinSelect('3','Economy', 3)">
-            Economy
-          </div>
-          <div class="container_menu_list_btn">
-            <button class="book_btn menu_list_btn" onclick="app.cabinClassNext()">
-              CONTINUE
-              <img class="icon_text" src="assets/image/arrow_next.svg">
+          <div class="menu_dropdown_list_select">
+            <button class="menu_dropdown_list_count" onclick="app.decrement('adultCount')">
+              <img src="assets/image/decrease.svg">
+            </button>
+            <p id="adultCount" class="menu_dropdown_list_counter"> 12</p>
+            <button class="menu_dropdown_list_count" onclick="app.increment('adultCount')" >
+              <img src="assets/image/increase.svg">
             </button>
           </div>
-
-
-
         </div>
-
-
-      </div>
-    </div>
-
-    <!--TRAVELLER PICKER DATE-->
-    <div id="modalTravellerDatepicker">
-      <div class="modal">
-
-        <div class="modal_header">
-          <div class="modal_action" onclick="app.closeTravellerDatepickerModal()">
-            <img src="assets/image/cancel.svg">
+        <div class="menu_dropdown_list menu_dropdown_list_even">
+          <div class="menu_dropdown_list_traveller">
+            <p class="menu_dropdown_list_age_grade">Children</p>
+            <p class="menu_dropdown_list_age">2 - 11yrs</p>
           </div>
-
-          <div class="menu_dropdown_header ">
-            <span class="menu_dropdown_header_title">Select Date of Birth</span>
+          <div class="menu_dropdown_list_select">
+            <button class="menu_dropdown_list_count" onclick="app.decrement('childrenCount')">
+              <img src="assets/image/decrease.svg">
+            </button>
+            <p id="childrenCount" class="menu_dropdown_list_counter">23</p>
+            <button class="menu_dropdown_list_count" onclick="app.increment('childrenCount')" >
+              <img src="assets/image/increase.svg">
+            </button>
           </div>
-
-
         </div>
-
-        <div id="datepickerTraveller" class="modal_datepicker" data-language='en'></div>
-
-      </div>
-    </div>
-
-    <!--FILTER RESULT PICKER-->
-    <div id="modalFilterResult">
-      <div class="modal">
-
-        <div class="modal_header">
-          <div class="modal_action" onclick="app.closeFilterResultModal()">
-            <img src="assets/image/cancel.svg">
+        <div class="menu_dropdown_list ">
+          <div class="menu_dropdown_list_traveller">
+            <p class="menu_dropdown_list_age_grade">Infants</p>
+            <p class="menu_dropdown_list_age">under 2yrs</p>
           </div>
-
-          <div class="menu_dropdown_header ">
-            <span class="menu_dropdown_header_title">Select Date of Birth</span>
+          <div class="menu_dropdown_list_select">
+            <button class="menu_dropdown_list_count" onclick="app.decrement('infantCount')">
+              <img src="assets/image/decrease.svg">
+            </button>
+            <p id="infantCount" class="menu_dropdown_list_counter">56</p>
+            <button class="menu_dropdown_list_count" onclick="app.increment('infantCount')">
+              <img src="assets/image/increase.svg">
+            </button>
           </div>
-
-
         </div>
-
-
-        <div class="modal_body">
-          <div id="filter_result_1" class="modal_traveller_option" onclick="app.filterResultSelect('1', 2)">
-            Time to Complete Journey
-          </div>
-          <div id="filter_result_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.filterResultSelect('2', 2)">
-            <!--<img class="menu_list_indicator" src="assets/image/plane.svg">-->
-            Number of Stops
-          </div>
-
-          <div class="container_menu_list_btn">
-            <button class="book_btn " onclick="app.cabinClassNext()">
-              CONTINUE
-              <span class="path">
+        <div class="container_menu_list_btn">
+          <button class="book_btn menu_list_btn" onclick="app.travellerNext()">
+            CONTINUE
+            <span class="path">
               <img class="icon_text motion_arrow" src="assets/image/arrow_next.svg">
-              </span>
-            </button>
-          </div>
-
+            </span>
+          </button>
         </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!--CABIN CLASS PICKER-->
+
+<div id="modalCabinClassPicker">
+  <div class="modal">
+
+
+    <div class="modal_header">
+      <div class="modal_action" onclick="app.closeCabinpickerModal()">
+        <img src="assets/image/cancel.svg">
+      </div>
+
+      <div class="menu_dropdown_header">
+        <span class="menu_dropdown_header_title">Select a Cabin Class</span>
+      </div>
+
+
+    </div>
+    <div class="modal_body">
+
+      <div id="cabin_menu_list_1" class="modal_traveller_option" onclick="app.cabinSelect('1','First Class', 3)">
+        First Class
+      </div>
+      <div id="cabin_menu_list_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.cabinSelect('2','Business', 3)">
+        <!--<img class="menu_list_indicator" src="assets/image/plane.svg">-->
+        Business
+      </div>
+      <div id="cabin_menu_list_3" class="modal_traveller_option" onclick="app.cabinSelect('3','Economy', 3)">
+        Economy
+      </div>
+      <div class="container_menu_list_btn">
+        <button class="book_btn menu_list_btn " onclick="app.cabinClassNext()">
+          CONTINUE
+          <span class="path">
+            <img class="icon_text motion_arrow" src="assets/image/arrow_next.svg">
+          </span>
+        </button>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+</div>
+
+<!--TRAVELLER PICKER DATE-->
+<div id="modalTravellerDatepicker">
+  <div class="modal">
+
+    <div class="modal_header">
+      <div class="modal_action" onclick="app.closeTravellerDatepickerModal()">
+        <img src="assets/image/cancel.svg">
+      </div>
+
+      <div class="menu_dropdown_header ">
+        <span class="menu_dropdown_header_title">Select Date of Birth</span>
+      </div>
+
+
+    </div>
+
+    <div id="datepickerTraveller" class="modal_datepicker" data-language='en'></div>
+
+  </div>
+</div>
+
+<!--FILTER RESULT PICKER-->
+<div id="modalFilterResult">
+  <div class="modal">
+
+    <div class="modal_header">
+      <div class="modal_action" onclick="app.closeFilterResultModal()">
+        <img src="assets/image/cancel.svg">
+      </div>
+
+      <div class="menu_dropdown_header ">
+        <span class="menu_dropdown_header_title">Select Date of Birth</span>
+      </div>
+
+
+    </div>
+
+
+    <div class="modal_body">
+      <div id="filter_result_1" class="modal_traveller_option" onclick="app.filterResultSelect('1', 2)">
+        Time to Complete Journey
+      </div>
+      <div id="filter_result_2" class="modal_traveller_option modal_traveller_option_active" onclick="app.filterResultSelect('2', 2)">
+        <!--<img class="menu_list_indicator" src="assets/image/plane.svg">-->
+        Number of Stops
+      </div>
+
+      <div class="container_menu_list_btn">
+        <button class="book_btn " onclick="app.cabinClassNext()">
+          CONTINUE
+          <span class="path">
+            <img class="icon_text motion_arrow" src="assets/image/arrow_next.svg">
+          </span>
+        </button>
       </div>
 
     </div>
+  </div>
+
+</div>
 
 
-    <!--SIDENAV-->
-    <div id="homeMenu">
-      SIDE NAV HERE
+<!--SIDENAV-->
+<div id="homeMenu">
+  <div class="modal_header">
+    <div class="modal_action" onclick="app.closeHomeMenu()">
+      <img src="assets/image/cancel.svg">
     </div>
+
+    <div class="menu_dropdown_header sidenav_header">
+      <img class="sidenav_avatar" src="assets/image/user.svg"/>
+      <span class="menu_dropdown_header_title">
+        Hello, Funmi
+      </span>
+    </div>
+
+
+  </div>
+
+  <div class="modal_body">
+    <div class="modal_traveller_option sidenav_list" onclick="app.filterResultSelect('1', 2)">
+      <img class="sidenav_icon" src="assets/image/ticket.svg"> My Tickets
+    </div>
+    <div class="modal_traveller_option sidenav_list" onclick="app.filterResultSelect('2', 2)">
+      <img class="sidenav_icon" src="assets/image/wallet.svg"> Travel Wallet
+    </div>
+    <div class="modal_traveller_option sidenav_list" onclick="app.filterResultSelect('2', 2)">
+      <img class="sidenav_icon" src="assets/image/history.svg"> History
+    </div>
+
+  </div>
+
+
+</div>
 
 
 
@@ -904,14 +937,14 @@
 <script src="assets/js/jquery-3.2.1.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/js/moment.min.js"></script>
-      <script src="assets/js/daterangepicker.js"></script>
-      <script src="assets/js/datepicker.min.js"></script>
-      <script src="assets/js/datepicker.en.js"></script>
+<script src="assets/js/daterangepicker.js"></script>
+<script src="assets/js/datepicker.min.js"></script>
+<script src="assets/js/datepicker.en.js"></script>
 
 
 
 <script src="assets/js/app.js"></script>
-  </div>
+</div>
 
 </body>
 

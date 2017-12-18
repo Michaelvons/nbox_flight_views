@@ -219,7 +219,7 @@ input:focus, textarea:focus, img:focus, div:focus, button:focus {
   color: white;
   padding: 16px 56px;
   justify-content: space-between;
-  margin: 24px 0px 32px 0px;
+  margin: 24px 0px 24px 0px;
 }
 
 .destination_alias{
@@ -311,7 +311,6 @@ button{
 
 .main_preloader_container{
   background-image: linear-gradient(180deg, #E4E4E4 0%, #FFFDFD 100%);
-  padding: 32px 0px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -321,6 +320,7 @@ button{
 .card_title{
   color: #4A4A4A;
   font-size: 16px;
+  margin-left: 10px;
 }
 
 .card_image{
@@ -578,6 +578,18 @@ footer p{
   /*background-repeat: no-repeat;*/
 }
 
+.bg_preloader_night{
+  width: 3000px;
+  height: 330px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background-image: url('/assets/image/bg_night.jpg');
+  background-size: contain;
+  background-position: right;
+}
+
 .card_suggestion_destination{
   font-size: 20px;
   font-family: Hind-Bold;
@@ -597,8 +609,8 @@ footer p{
 }
 
 /* .separator_plane_suggestion_active{
-  display: none;
-  color: red !important;
+display: none;
+color: red !important;
 } */
 
 .container_preloader{
@@ -1091,7 +1103,7 @@ width: 24px;
 .card_image{
   width: 100%;
   border-radius: 8px;
-  /*background-image: url(../../assets/img/flare.png);*/
+  :
 }
 
 .card_flare{
@@ -1167,12 +1179,12 @@ background-color: yellow;
 .sun{
   position: absolute;
   top: 2%;
-  left: 25%;
+  left: 100px;
   width: 300px;
 }
 
 .blackPlane{
-display:none !important;
+  display:none !important;
 }
 
 
@@ -1183,26 +1195,26 @@ display:none !important;
 }
 
 .rotate{
--webkit-animation: rotation 1.3s infinite linear;
+  -webkit-animation: rotation 1.3s infinite linear;
 
 }
 
 @-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(359deg);
-		}
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
 }
 
 /*.modalDatepicker{*/
-  /*height: 100vh;*/
-  /*background-color: rgba(0,0,0,.6);*/
+/*height: 100vh;*/
+/*background-color: rgba(0,0,0,.6);*/
 /*!* height: 100vh; *!*/
 /*display:flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
+/*justify-content: center;*/
+/*align-items: center;*/
 /*!*   background-color:white; *!*/
 /*}*/
 
@@ -1214,7 +1226,7 @@ display:none !important;
 }
 
 .datepickerModal{
-    display: flex;
+  display: flex;
 
 }
 
@@ -1240,7 +1252,7 @@ display:none !important;
 }
 
 .modal_tab{
-font-family: Hind-Medium;
+  font-family: Hind-Medium;
   font-size: 24px;
 }
 
@@ -1249,8 +1261,8 @@ font-family: Hind-Medium;
 }
 
 .ui-widget.ui-widget-content{
-      border: 1px solid #c5c5c5;
-    width: 95%;
+  border: 1px solid #c5c5c5;
+  width: 95%;
 }
 
 .ui-datepicker-prev span {
@@ -1303,11 +1315,11 @@ font-family: Hind-Medium;
 
 
 /*.daterangepicker.dropdown-menu{*/
-  /*width: 100%;*/
+/*width: 100%;*/
 /*}*/
 
 /*.daterangepicker{*/
-  /*display: block !important;*/
+/*display: block !important;*/
 /*}*/
 
 
@@ -1349,13 +1361,13 @@ font-family: Hind-Medium;
 }
 
 .datepicker--nav{
-padding: 16px !important;
-font-size: 16px;
+  padding: 16px !important;
+  font-size: 16px;
 }
 
 .datepicker--days-names{
   margin: 16px 0px !important;
-font-size: 16px !important;
+  font-size: 16px !important;
 }
 
 .datepicker--cell-day{
@@ -1468,7 +1480,7 @@ font-size: 16px !important;
 }
 
 .modal_traveller_option_active{
-  background-color: black !important;
+  background-color: #274E80 !important;
   color: white !important;
 }
 
@@ -1493,7 +1505,7 @@ font-size: 16px !important;
   animation: backandforth 2s ease 0s;
   animation-iteration-count:infinite;
   width: 24px;
-  }
+}
 
 @-webkit-keyframes ani {
   0% {
@@ -1524,4 +1536,49 @@ font-size: 16px !important;
   /* display:  flex; */
   top: -5px;
   /* margin: auto; */
+}
+
+
+.slide_1{
+  margin-left: 10px;
+}
+
+.sidenav_icon{
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.sidenav_list{
+  border-bottom: none;
+}
+
+.sidenav_header{
+  justify-content: normal !important;
+  align-items: center;
+}
+
+.sidenav_avatar{
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
+}
+
+.flight_list ul li{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: Hind-Medium;
+  /*margin-left: 0px;*/
+}
+
+.flight_list ul{
+  margin-left: 0px;
+  -webkit-margin-after:  0px;
+  -webkit-margin-before: 0px;
+  -webkit-padding-start: 0px;
+}
+
+.flight_list{
+  margin-bottom: 24px;
 }

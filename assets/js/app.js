@@ -419,9 +419,15 @@ var app = {
 
     selectedContactsItem: function (id) {
         console.log(" contact selected");
+        console.log("ID")
         console.log(id);
         var storedContacts = JSON.parse(localStorage.getItem("contacts"));
-        console.log(storedContacts[id].firstName);
+        var storedContactsCount = storedContacts.length - 1;
+        var uid = storedContactsCount - id;
+        console.log("UID")
+        console.log(uid);
+        console.log("FIRST NAME")
+        console.log(storedContacts[uid].firstName);
 
         // console.log(middlename);
         // console.log(surname);

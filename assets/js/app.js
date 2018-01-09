@@ -421,7 +421,7 @@ var app = {
         console.log(" contact selected");
         console.log(id);
         var storedContacts = JSON.parse(localStorage.getItem("contacts"));
-        console.log(storedContacts[0].firstName);
+        console.log(storedContacts[id].firstName);
 
         // console.log(middlename);
         // console.log(surname);
@@ -460,16 +460,17 @@ var app = {
             var midName = app.element('traveller_midname').value;
             var surname = app.element('traveller_surname').value;
 
-            var id = initialContacts.length - 1;
+            if (initialContacts.length !== 0) {
+                var id = initialContacts.length;
 
-            contactsArray = {id: id, initial: "Mr", firstName: firstName, midName: midName, surname: surname};
+                contactsArray = {id: id, initial: "Mr", firstName: firstName, midName: midName, surname: surname};
 
-            contacts.unshift(contactsArray);
-            localStorage.setItem("contacts", JSON.stringify(contacts));
+                contacts.unshift(contactsArray);
+                localStorage.setItem("contacts", JSON.stringify(contacts));
 
-            var storedContacts = JSON.parse(localStorage.getItem("contacts"));
-            console.log(storedContacts);
-
+                var storedContacts = JSON.parse(localStorage.getItem("contacts"));
+                console.log(storedContacts);
+            }
         }
     },
 

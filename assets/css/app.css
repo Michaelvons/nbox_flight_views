@@ -1582,3 +1582,66 @@ background-color: yellow;
 .flight_list{
   margin-bottom: 24px;
 }
+
+.contacts_list{
+  background-color: #f2f2f2;
+  padding: 16px;
+  overflow: auto;
+  height: 50px;
+}
+
+.contact_list_item{
+  padding: 16px 0px;
+  border-bottom: 1px solid #EAEAEA;
+  list-style-type: none;
+}
+
+.contact_list_item p{
+  color: #666666;
+  font-size: 16px;
+  font-family: Hind-Regular;
+}
+
+.contact_list_container{
+  /*position: relative;*/
+  /*overflow: scroll;*/
+  /*height: 200px;*/
+}
+
+.contacts_list_container {
+  overflow: auto !important;
+  height: 100%;
+}
+
+.contact_list_items {
+  overflow: scroll !important;
+  padding: 0px 24px;
+}
+
+.card_traveller_head{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card_traveller_save{
+  display: flex;
+  align-items: center;
+  margin: 24px 0px;
+  color: #3C7AC9;
+  font-family: Hind-Regular;
+}
+
+.card_traveller_save_image{
+  width: 20px;
+  margin-right: 8px;
+}
+
+/*.contact_list_item_pointer{*/
+  /*list-style-type: none;*/
+/*}*/
+
+.contact_list_item_ul{
+  padding: 0px;
+}
+
